@@ -1,0 +1,52 @@
+<!--setInterval-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .center {
+            text-align-last: center;
+        }
+
+        .fontStyle {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+
+        .number {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        }
+    </style>
+
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 class="center fontStyle">Hello World</h1>
+    <br>
+    <h2 class="center fontStyle">
+        Followers is :
+    </h2>
+    <h2 class="center number">1000</h2>
+</body>
+<script>
+    var counter = document.querySelector(".number");
+    var count = 1;
+    setInterval(()=>{
+        if(count <= 1000){
+            count++;
+            counter.innerText = count;
+        }
+    }, 10);
+</script>
+
+</html>
+<!--
+    When the script tag is insde the head tag, it is not working.
+    But it is after the body tage, it is working as i want. 
+    !!!
+-->
+

@@ -1,0 +1,83 @@
+<!-- maagic color changer -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Text</title>
+    <style>
+        .center{
+            text-align: center;
+            border: solid red 3px;
+            background-color: aliceblue;
+        }  
+        .gray{
+            color: gray;
+            border: 1px solid;
+
+        }
+        .pink{
+            color: pink;
+            border: 1px solid;
+        }
+        .blue{
+            color: blue;
+            border: 1px solid;
+        }
+        .red{
+            color: red;
+            border: 1px solid;
+        }
+        .green{
+            color: green;
+            border: 1px solid;
+        }
+        .orange{
+            color: orange;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+<h2 class="gray">Gray</h2>
+<h2 class="pink">Pink</h2>
+<h2 class="blue">Blue</h2>
+<h2 class="red">Red</h2>
+<h2 class="green">Green</h2>
+<h2 class="orange">Orange</h2>
+</div>    
+</body>
+<script>
+    var gray = document.querySelector('.gray');
+    var pink = document.querySelector('.pink');
+    var blue = document.querySelector('.blue');
+    var red = document.querySelector('.red');
+    var green = document.querySelector('.green');
+    var orange = document.querySelector('.orange');
+
+    var backcolor = document.querySelector('.center');
+
+
+    var getBGColor = (selectedStyle) =>{
+        return window.getComputedStyle(selectedStyle).color;
+    };
+
+
+    const magicColorChanger = (element, color) => {
+        return element.addEventListener("mouseenter", () =>{
+            backcolor.style.background = color;
+        });
+    };
+
+
+    magicColorChanger(gray, getBGColor(gray));
+    magicColorChanger(pink, getBGColor(pink));
+    magicColorChanger(blue, getBGColor(blue));
+    magicColorChanger(red, getBGColor(red));
+    magicColorChanger(green, getBGColor(green));
+    magicColorChanger(orange, getBGColor(orange));
+</script>
+</html>
