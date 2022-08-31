@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: coral;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .p {
+            color: crimson;
+        }
+
+        #p {
+            color: darkorange;
+            background-color: rgb(36, 204, 148);
+        }
+
+        p {
+            background-color: bisque;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+
+        .div {
+            width: auto;
+            background-color: antiquewhite;
+            border: 2px solid red;
+            border-radius: 9px;
+            padding: 20px;
+            margin: 25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <h1>Hello All</h1>
+        <hr>
+        <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, molestiae qui! Dolorum.</p>
+        <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ut sed accusantium incidunt provident
+            repellat saepe laboriosam!</p>
+        <p id="p"><b>Lorem, ipsum.</b> consectetur adipisicing elit. Consectetur atque totam enim?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quibusdam, quam corporis exercitationem
+            porro maiores praesentium? Accusamus cum sit totam nobis esse natus.</p>
+    </div>
+
+</body>
+<script>
+    
+    var a = document.getElementById("p");
+    a.style.background = "green"
+    let b = 0;
+    setInterval(() =>{
+        if(b <=256){
+            a.innerHTML=b;
+            b++;
+        }
+    }, 4);
+    
+
+</script>
+</html>
