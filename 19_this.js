@@ -5,12 +5,12 @@ console.log(this);
 //----------------------------------------
 
 var user = {
-    name: "Nayan",
-    serName: "Patel",
-    courseCount: 4,
-    getCourseCount : function (){
-        console.log("LINE12", this);
-    }, 
+  name: "Nayan",
+  serName: "Patel",
+  courseCount: 4,
+  getCourseCount: function () {
+    console.log("LINE12", this);
+  },
 }
 
 user.getCourseCount();
@@ -32,17 +32,17 @@ LINE12 {
 
 //different output in browser.
 var user = {
-    name: "Nayan",
-    serName: "Patel",
-    courseCount: 4,
-    getCourseCount : function (){
-        console.log("LINE12", this);
-        function sayHello(){
-            console.log("Hello");
-            console.log("LINE15", this)
-        }
-        sayHello();
-    }, 
+  name: "Nayan",
+  serName: "Patel",
+  courseCount: 4,
+  getCourseCount: function () {
+    console.log("LINE12", this);
+    function sayHello() {
+      console.log("Hello");
+      console.log("LINE15", this)
+    }
+    sayHello();
+  },
 }
 
 // output
