@@ -1,0 +1,1 @@
+This is text which gonna be written in given file.
