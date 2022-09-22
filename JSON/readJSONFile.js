@@ -1,16 +1,12 @@
 let fs = require('fs');
 
 fs.readFile('bookJSON.json', (err, data) => {
-
-    let d = JSON.parse(data)
-
-    createJSONObject(d)
-
+    createJSONObject(data)
 })
 
 function createJSONObject(data) {
-    var data = data
-    console.log(data);
+    let d = JSON.parse(data)
+    console.log(d);
 };
 
 
