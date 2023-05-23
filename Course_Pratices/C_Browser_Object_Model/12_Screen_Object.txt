@@ -1,0 +1,17 @@
+JavaScript Screen Object
+    The JavaScript screen object holds information of browser screen.
+    It can be used to display screen width, height, colordepth, pixelDepth etc.
+
+    The navigator object is the window ppriority, os it can be accessed by 
+        window.screen
+    or 
+        screen
+    
+property of javascript screen object.
+    width
+    height
+    availWidth
+    availHeight
+    colorDepth
+    pixcelDepth
+    

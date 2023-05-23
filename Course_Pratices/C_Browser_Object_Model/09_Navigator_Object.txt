@@ -1,0 +1,27 @@
+JavaScript Navigator Object:
+    The JavaScript navigator objects is used for browser detection.
+    It can be used to get browser information such as appName, appCodeName, userAgent etc.
+    The navigator object is the window property, so it can be accessed by:
+
+    windows.navigator
+    or
+    navigator
+
+    properties:
+        > appName
+        > appVersion
+        > appCodeName
+        > cookieEnabled
+        > userAgent
+        > language
+        > userLanguage
+        > plugins
+        > systemLanguage
+        > mimeTypes[]
+        > platform
+        > online
+
+Method of js navigator object.
+    > javaEnabled()
+    > taintEnabled()
+    

@@ -1,0 +1,41 @@
+Document Object Model
+    The document object representic the whole htmml document.
+    
+    When html document is loaded in the browser, it becomes a document object.
+    It is the root element that represent the html document.
+    It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+
+    As mentioned earlier, it is the object of window. So
+        window.document
+    is same As
+        document
+
+According ti W3C - "The W3C Document Object Model (DOM) 
+is a platform and language-neutral interface that allows 
+programs and script to dynamically access and update the 
+content, structur, and style of a document."
+
+
+Properties of Document Object
+
+document
+    > anchor
+    > form
+        > text
+        > textarea
+        > checkbox
+        > radio
+        > select
+            > option
+        > reset
+        > button
+    > link
+
+Method of document object
+    > write("String")
+    > writeln("String")
+    > getElementById()
+    > getElementsByName()
+    > getElementsByTagName
+    > getElementsByClassName()
+    

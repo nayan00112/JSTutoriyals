@@ -1,0 +1,31 @@
+Browser objects:
+    window:
+        > document
+        > History
+        > screen
+        > navigator
+        > location
+
+example:
+    window.alert("Java Point");
+Is same as:
+    alert("hello javapoint");
+
+
+Window Object
+    The window object represent a window in browser.
+    An object of window is created automatically by the browser.
+    Window is the object of browser, it is not the object of javascript.
+    The javascript object are string, array, date etc.
+
+Note:
+    If html document contains frame or iframe, browser create additional window object for each frame.
+
+methods of window objectL
+    -> alert()
+    -> confirm()
+    -> prompt()
+    -> open()
+    -> close()
+    -> setTimeout()
+

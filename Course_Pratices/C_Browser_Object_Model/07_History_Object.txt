@@ -1,0 +1,9 @@
+JavaScript  History Object:
+The JavaScript history object represents an arrya of URLs visited by the user.
+By using this object, you can load previous, forword or any particular page.
+
+The history is the windows property, so it can be accessed by:
+    window.history
+or
+    history
+
