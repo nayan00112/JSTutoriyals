@@ -1,0 +1,54 @@
+<!-- ama amuk j bataveli chhe agad biji gani chhe je karvani baki chhe...  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object methods</title>
+</head>
+<body>
+    <Script>
+
+        // 1. assihn
+        const a = {
+            a:1,
+            b:2
+        }
+
+        const b = {
+            c: 3,
+            d: 4,
+            e: 5
+        }
+
+        const c = Object.assign(a, b)
+        document.write(c.a)
+        document.write(c.b)
+        document.write(c.c)
+        document.write(c.d)
+        document.write(c.e)
+
+        //4. create
+
+        // let people = {
+        //     disp: dis(){
+        //         document.write()
+        //     }
+        // } error
+        
+               
+        
+        
+        const me = Object.create(people)
+        me.name = "Manan"
+        me.printfun()
+        //3. isExtensible
+        const cc = Object.isExtensible()
+        document.write(cc) // false
+
+    </Script>
+
+</body>
+</html>

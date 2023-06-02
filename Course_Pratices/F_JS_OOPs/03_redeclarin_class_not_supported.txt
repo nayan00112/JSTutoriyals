@@ -1,0 +1,5 @@
+Class Declarations Example:
+Redeclaration Class
+
+A class can be declared once only.
+If we try to declare class more than one time, it throws an error.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript class</title>
+</head>
+<body>
+    <script>
+
+        // var e3 = new Employee(13, "Timepass") // We canot use here, it is give us error.
+        class Employee{
+            constructor(id, name){
+                this.id = id
+                this.name = name
+            }
+
+
+            details(){
+                document.write("Hello " + this.name + " (" + this.id + ")")
+            }
+        }
+
+        var e1 = new Employee(12, "Tom")
+        var e2 = new Employee(14, "Jhon")
+
+        e1.details()
+        e2.details()
+
+    </script>
+</body>
+</html>

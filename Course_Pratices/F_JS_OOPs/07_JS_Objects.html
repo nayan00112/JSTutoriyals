@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript object</title>
+</head>
+
+<body>
+    <h1>JavaScript Object</h1>
+    <p>
+        A javascript object is an entity having state ans behavior (properties and method).
+        For Example: car, pen, bike, glass, etc...
+    </p>
+
+    <h1>
+        Creating Objects in JavaScript
+    </h1>
+    <p>There are 3 ways to create objects.</p>
+    <ol type="1">
+        <li>By object literal</ui>
+        <li>By creating instance ob object directly (using new keyword)</li>
+        <li>By using an object constructor (using new keyword)</li>
+    </ol>
+    <button onclick="disp()">Display: JS Object by Literal</button>
+    <button onclick="monikDisp()">Display: JS Object By creating instance of Object.</button>
+    <button onclick="empDisp()">Display: JS Object  By using an objecct constructor.</button>
+    <p id="desc"></p>
+
+
+    <script>
+        // JavaScript Object by object literal
+        obj = { id: 102, name: "Nayan patel", email: "nayan123@g.c" }
+
+        function disp() {
+            document.getElementById('desc').innerHTML = `<b> ${obj.id}, ${obj.email}, ${obj.name} </b>`
+        }
+
+
+        // By creating instance of Object.
+        var obj2 = new Object();
+        obj2.id = 101;
+        obj2.name = "Monik"
+        obj2.email= "monik@m.c"
+        function monikDisp(){
+            document.getElementById('desc').innerHTML = `<b> ${obj2.id}, ${obj2.email}, ${obj2.name} </b>`
+        }
+
+
+        // By using an objecct constructor.
+
+        function emp(id, name, email){
+            this.id = id;
+            this.name = name;
+            this.email = email;
+        }
+        e = new emp(123, "Kanj", "kanj01234@gmail.com")
+
+        function empDisp(){
+            document.getElementById('desc').innerHTML = `<b> ${e.id}, ${e.email}, ${e.name} </b>`
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 
+    In JavaScript, objects are fundamental data structures used to store and organize data. They are collections of key-value pairs, where each key is a unique identifier (usually a string) and each value can be of any data type, including other objects. Objects can also contain methods, which are functions associated with the object.
+
+There are different ways to create objects in JavaScript: {{May be more then 1 or 2 methods for creating object.}}
+
+1. Object Literal:
+```javascript
+var person = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "New York"
+  },
+  sayHello: function() {
+    console.log("Hello!");
+  }
+};
+```
+In this example, an object `person` is created using the object literal notation. It has properties like `name` and `age`, and a nested object `address`. It also has a method `sayHello` that logs a greeting.
+
+2. Object Constructor:
+```javascript
+var person = new Object();
+person.name = "John";
+person.age = 30;
+person.address = {
+  street: "123 Main St",
+  city: "New York"
+};
+person.sayHello = function() {
+  console.log("Hello!");
+};
+```
+This approach creates an empty object using the `Object` constructor, and then properties and methods are added to it using dot notation.
+
+3. Object.create():
+```javascript
+var personProto = {
+  sayHello: function() {
+    console.log("Hello!");
+  }
+};
+
+var person = Object.create(personProto);
+person.name = "John";
+person.age = 30;
+person.address = {
+  street: "123 Main St",
+  city: "New York"
+};
+```
+Here, an object `personProto` is created with a `sayHello` method. `person` is created using `Object.create()` and is assigned `personProto` as its prototype. Properties are added to `person` directly.
+
+Objects in JavaScript are mutable, meaning their properties and values can be modified or added even after they are created. Properties can be accessed using dot notation (`person.name`) or bracket notation (`person["name"]`), and methods can be invoked by using parentheses (`person.sayHello()`).
+
+Objects are an integral part of JavaScript, enabling the creation of complex data structures, modeling real-world entities, and facilitating object-oriented programming paradigms.
+ -->

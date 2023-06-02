@@ -39,3 +39,7 @@ Method of document object
     > getElementsByTagName
     > getElementsByClassName()
     
+    JS innerHTML Property
+    JS innerText Property
+
+    

@@ -1,0 +1,47 @@
+<!-- visite javapoint documentation or other documentation -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js prototype</title>
+</head>
+
+<body>
+    <script>
+        function Employee(fname, lname) {
+            this.fname = fname;
+            this.lname = lname;
+        }
+
+        Employee.prototype.fullName = function () {
+            return (this.fname + this.lname);
+        }
+
+        var e1 = new Employee("Martin", "Roy")
+        var e2 = new Employee("Duke", "William")
+
+        document.writeln(e1.fullName() + "<br>")
+        document.writeln(e2.fullName() + "<br>")
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+    In JavaScript, every object has a prototype. The prototype is an object from which other objects inherit properties and methods. It acts as a blueprint or template for creating new objects.
+
+In the given code, the `Employee.prototype` is used to define the `fullName` method. This means that the `fullName` method is added to the prototype object of the `Employee` function. As a result, all instances of the `Employee` objects created using the constructor will have access to this method.
+
+By adding the `fullName` method to the prototype, memory usage is optimized because all instances of the `Employee` objects share the same method instead of having a separate copy of the method for each instance. This helps in reducing memory consumption and improving performance.
+
+Using prototypes also allows adding new methods or properties to an object type at runtime. Any objects created after adding the new method to the prototype will automatically have access to it.
+
+In summary, the prototype in JavaScript is an object that is associated with a constructor function and contains properties and methods that are shared among all instances created using that constructor. It enables efficient memory usage and dynamic addition of properties and methods to objects.
+
+
+ -->

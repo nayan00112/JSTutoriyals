@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(){
+                this.id = 16;
+                this.name = "Jhon";
+            }
+        }
+
+        var a = new Employee();
+        document.writeln(a.id)
+        document.writeln(a.name)
+
+
+        class A {
+            constructor(){
+                this.abc = 4;
+                document.write(this.abc)
+            }
+        }
+        class B extends A{
+            constructor(){
+                super() // must there
+                this.abc = 5;
+                document.write(this.abc)
+            }
+        }
+        
+        let aa = new A()
+        let bb = new B()
+
+    </script>
+</body>
+</html>
+
+ <!-- output:
+ 16 Jhon 445 -->
