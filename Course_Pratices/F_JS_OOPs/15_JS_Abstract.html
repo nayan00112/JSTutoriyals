@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abstract</title>
 </head>
+
 <body>
     <!-- {{I think there is no any keyword like abstract in other programming language but techniques that allows us to work as abstract.}} -->
-    <Script>
+    <script>
+        //Creating a constructor function  
+        function Vehicle() {
+            this.vehicleName = 'vehicleName';
+            throw new Error("You cannot create an instance of Abstract class");
 
-    </Script>
+        }
+        Vehicle.prototype.display = function () {
+            return this.vehicleName;
+        }
+        var vehicle = new Vehicle();  
+    </script>
+    <!-- 
+
+ Output:
+tml:17  Uncaught Error: You cannot create an instance of Abstract class
+    at new Vehicle (15_JS_Abstract.html:17:19)
+    at 15_JS_Abstract.html:23:23
+Vehicle @ 15_JS_Abstract.html:17
+(anonymous) @ 15_JS_Abstract.html:23
+
+     -->
+
+
+    <!-- 
+The given code is an example of creating an abstract class in JavaScript using constructor functions and prototypes.
+
+In JavaScript, there is no built-in support for abstract classes. 
+However, developers can create a similar concept by using certain techniques or conventions. 
+In this code, the `Vehicle` function is intended to serve as an abstract class.
+
+Inside the `Vehicle` constructor function, 
+there is a line `throw new Error("You cannot create an instance of Abstract class");`. 
+This line throws an error with a custom message whenever an attempt is made to create an instance 
+of the `Vehicle` class. The intention here is to prevent direct instantiation of the abstract class.
+
+The `Vehicle.prototype.display` method is defined using the prototype. 
+It is a method that can be shared among instances of `Vehicle` or its derived classes. 
+In this case, the `display` method returns the `vehicleName` property of the object.
+
+Finally, an instance of `Vehicle` is created using the `new` keyword: `var vehicle = new Vehicle();`. 
+Since the constructor throws an error, attempting to create an instance of the abstract class will result in an error being thrown.
+
+In summary, the given code demonstrates an attempt to create an abstract 
+class in JavaScript by throwing an error in the constructor when an instance is created. 
+This approach aims to enforce the concept of an abstract class where instances cannot be created directly, 
+but derived classes can extend and implement their own versions of the abstract class.
+      -->
 </body>
+
 </html>
