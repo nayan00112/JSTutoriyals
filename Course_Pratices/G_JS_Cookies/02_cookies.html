@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+<body>
+    <script>
+
+        function setCookies(n){
+            document.cookie = 'name =' + n
+        }
+        function getCookies(){
+            alert(document.cookie)
+        }
+
+        function myButtonEvent(){
+            var n = document.Myform.name.value;
+            
+            if(n != ""){
+                setCookies(n)
+            }
+            else{
+                alert('Enter your name')
+            }
+        }
+        
+    </script>
+
+    <form action="" name="Myform" onclick="myButtonEvent()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Set Cookies">
+    </form>
+
+    <button onclick="getCookies()">Get Cookies</button>
+</body>
+</html>
