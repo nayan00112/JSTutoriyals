@@ -32,6 +32,8 @@ let d = {
     'b': "2",
     'c': "3",
 }
+
+// for in loop 
 for(let n in d){
     console.log(n);
 }
