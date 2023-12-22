@@ -17,6 +17,8 @@ do {
 } while (b > 0)
 console.log("___________________________________");
 
+// for in loop 
+
 let c = [4, 6, 7, '6', 'g', "567gfd", "nayan"]
 
 for (let j in c) {
@@ -27,13 +29,13 @@ for (let j in c) {
     console.log(c[j]);
 }
 console.log("------");
+
 let d = {
     'a': "1",
     'b': "2",
     'c': "3",
 }
 
-// for in loop 
 for(let n in d){
     console.log(n);
 }
