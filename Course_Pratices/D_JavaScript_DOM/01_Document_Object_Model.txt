@@ -1,5 +1,5 @@
 Document Object Model
-    The document object representic the whole htmml document.
+    The document object representic the whole html document.
     
     When html document is loaded in the browser, it becomes a document object.
     It is the root element that represent the html document.
@@ -10,7 +10,7 @@ Document Object Model
     is same As
         document
 
-According ti W3C - "The W3C Document Object Model (DOM) 
+According to W3C - "The W3C Document Object Model (DOM) 
 is a platform and language-neutral interface that allows 
 programs and script to dynamically access and update the 
 content, structur, and style of a document."
