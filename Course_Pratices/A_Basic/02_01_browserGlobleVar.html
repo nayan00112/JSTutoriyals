@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globle variable in function</title>
+</head>
+<body style="background-color: rgb(29, 29, 39);">
+    <script>
+        function fun(){
+            window.nayan = 48;
+        }
+        function callFun(){
+            window.alert(window.nayan);
+        }
+
+        function callButton()
+        {
+            fun();
+            callFun();
+        }
+    </script>
+    <button onclick="callButton()">Click me!</button>
+</body>
+</html>
+
+<!-- 
+this HTML file creates a button that, when clicked, triggers the callButton() function. This function calls two other functions: fun() and callFun().
+
+Here's what each part does:
+
+fun() function:
+
+This function sets a global variable nayan on the window object and assigns it the value 48.
+callFun() function:
+
+This function uses window.alert() to display the value of the global variable nayan.
+callButton() function:
+
+This function is triggered when the button is clicked.
+It calls the fun() function, which sets the nayan variable to 48.
+Then, it calls the callFun() function, which displays an alert with the value of nayan, which is 48 in this case.
+So, when you click the button, it executes callButton(), which in turn sets nayan to 48 using fun() and then displays an alert with that value using callFun(). This demonstrates how clicking the button results in an alert showing the value 48. 
+-->
