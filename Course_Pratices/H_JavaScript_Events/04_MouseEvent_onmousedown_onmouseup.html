@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousedown and onmouseup</title>
+    <style>
+        div {
+            color: aliceblue;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        .b1 {
+            background-color: rgb(255, 174, 0);
+        }
+
+        .b2 {
+            background-color: rgb(0, 153, 255);
+        }
+    </style>
+
+    <script>
+        function omup() {
+            alert("You press click")
+        }
+        function omdown() {
+            alert("You released click");
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="b1" onmousedown="omdown()">
+        <h1>
+            ONMOUSEDOWN
+        </h1>
+    </div>
+
+    <div class="b2" onmouseup="omup()">
+        <h1>
+            ONMOUSEUP
+        </h1>
+    </div>
+
+</body>
+
+</html>

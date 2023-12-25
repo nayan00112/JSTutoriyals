@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousemove</title>
+    <style>
+        #msg{
+            background-color: rgba(157, 185, 0, 0.127);
+            color: rgb(0, 0, 0);
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+    <script>
+function myfun(){
+    document.getElementById("msg").innerHTML = "<b style='color:red; font-size:larger;'>You moved cursor!!!</b>"
+}
+    </script>
+</head>
+<body>
+    
+    <div id="msg" onmousemove="myfun()">
+        DON'T MOVE CURSOR ON THIS AREA!!!
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseover and onmouseout</title>
+    <script>
+        function showmsg() {
+            document.getElementById("msg").innerHTML = "<b>Enter the Text...</b>"
+        }
+
+        function hidemsg() {
+            document.getElementById("msg").innerHTML = ""
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello World!!!</h1>
+    <hr>
+    <textarea name="tarea" id="tareaid" cols="30" rows="10" onmouseover="showmsg()" onmouseout="hidemsg()"></textarea>
+    <p id="msg" style="color: red;"></p>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keybord Event</title>
+    <script>
+        function okdown() {
+            document.getElementById("msg").innerHTML = "<b style='color:green;'>Awsome!</b>";
+            // as soon as pressed
+        }
+        function okup(){
+            document.getElementById("msg2").innerHTML="<b style='color:green;'>great!!</b>";
+            // as soon as realesed
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Name: <input type="text" onkeydown="okdown()">
+        <span id="msg">
+            Type your name...
+        </span>
+    </div>
+    <div>
+        Course <input type="text" name="course" onkeyup="okup()">
+        <span id="msg2">
+            Type your course...
+        </span>
+    </div>
+
+
+</body>
+
+</html>
