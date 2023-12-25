@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+    <style>
+        body {
+            background-color: rgb(8, 42, 63);
+            color: rgb(248, 255, 196);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        div {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function storecookies() {
+            document.cookie = "name=" + document.form1.name.value + ";";
+            document.cookie = "email=" + document.form1.email.value + ";";
+            document.cookie = "course=" + document.form1.course.value + ";";
+        }
+
+        function getcookie() {
+            if (document.cookie.length != 0) {
+                document.getElementById("printcookies").innerText = document.cookie;
+            }
+            else {
+                document.getElementById("printcookies").innerHTML = "<b>Not avaliable cookie</b>"
+            }
+        }
+
+        function getcookie_name() {
+            if (document.cookie.length != 0) {
+                document.getElementById("printcookies").innerText = document.cookie.split(";")[0];
+            }
+            else {
+                document.getElementById("printcookies").innerHTML = "<b>Not avaliable cookie</b>"
+            }
+        }
+
+        function getcookie_email() {
+            if (document.cookie.length != 0) {
+                document.getElementById("printcookies").innerText = document.cookie.split(";")[1];
+            }
+            else {
+                document.getElementById("printcookies").innerHTML = "<b>Not avaliable cookie</b>"
+            }
+        }
+
+        function getcookie_course() {
+            if (document.cookie.length != 0) {
+                document.getElementById("printcookies").innerText = document.cookie.split(";")[2];
+            }
+            else {
+                document.getElementById("printcookies").innerHTML = "<b>Not avaliable cookie</b>"
+            }
+        }
+
+        function deleteCookies() {
+            document.cookie = document.cookie + "; max-age=0" + ";";
+        }
+
+    </script>
+
+    <div>
+        <h1>Form</h1>
+    </div>
+    <hr>
+    <div>
+        <form onsubmit="storecookies()" name="form1">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course" required>
+            </div>
+            <div>
+                <input type="submit" value="store cookies">
+            </div>
+        </form>
+        <div>
+            <button onclick="getcookie_name()">Get name</button>
+            <button onclick="getcookie_email()">Get email</button>
+            <button onclick="getcookie_course()">Get course</button>
+            <button onclick="getcookie()">Get cookies</button>
+        </div>
+        <div>
+            <button onclick="deleteCookies()">Delete cookies</button>
+        </div>
+    </div>
+    <hr>
+    <div id="printcookies">
+
+    </div>
+</body>
+
+</html>
+
+<!-- Learn more about different ways to get specific data from the cookies. -->

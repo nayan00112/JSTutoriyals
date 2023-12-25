@@ -7,8 +7,8 @@
     <title>cookie</title>
     <style>
         body {
-            background-color: rgb(10, 28, 43);
-            color: aliceblue;
+            background-color: rgb(5, 32, 18);
+            color: rgb(196, 255, 210);
             font-family: 'Segoe UI', Roboto, sans-serif;
         }
 
@@ -21,26 +21,16 @@
 <body>
     <script>
         function storecookies() {
-            let name = document.form1.name.value;
-            let email = document.form1.email.value;
-            let course = document.form1.course.value;
-
-            let obj = {} // Create empty/custom object
-            obj.name = name;
-            obj.email = email;
-            obj.course = course;
-            console.log(obj);
-
-            let jsonString = JSON.stringify(obj)
-            // JSON.stringify is a method that converts a JavaScript value to a JSON string. It is useful for sending data to a web server or storing data in a database. It can also take optional parameters to modify the output, such as a replacer function or array, and a space argument for indentation1
-            console.log(jsonString);
-
-
-            document.cookie = jsonString;
+            document.cookie=  "name=" + document.form1.name.value+";";
+            document.cookie=  "email=" + document.form1.email.value+";";
+            document.cookie=  "course=" + document.form1.course.value+";";
         }
 
         function getcookie(){
             document.getElementById("printcookies").innerText = document.cookie;
+        }
+        function deleteCookies(){
+            document.cookie = document.cookie+"; max-age=0"+";";
         }
     </script>
 
@@ -69,6 +59,9 @@
         <div>
             <button onclick="getcookie()">Get cookies</button>
         </div>
+        <div>
+            <button onclick="deleteCookies()">Delete cookies</button>
+        </div>
     </div>
     <hr>
     <div id="printcookies">
@@ -80,6 +73,5 @@
 
 <!-- 
     Output:
-    
-    All data are stored.
+    All Data stored in cookies.
 -->
