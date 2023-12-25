@@ -26,6 +26,6 @@ change,onchange,When the user modifies or changes the value of a form element
 Window/Document events,,
 Event Performed,Event Handler,Description
 load,onload,When the browser finishes the loading of the page
-unload,onunload,When the visitor leaves the current webpage, the browser unloads it
+unload,onunload,When the visitor leaves the current webpage; the browser unloads it
 resize,onresize,When the visitor resizes the window of the browser
 
