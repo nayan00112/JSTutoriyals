@@ -141,3 +141,27 @@ By default, if you don't specify a `path` attribute, the cookie will be valid fo
 
 Remember, when retrieving a cookie, the `path` attribute is considered. If you set a cookie with a specific path, attempts to retrieve it from a different path won't succeed. Always set the appropriate `path` attribute based on your application's requirements for cookie access across different paths.
     
+
+
+Absolutely! The `domain` attribute in a cookie specifies the domain for which the cookie is valid. It defines the domain name within which the cookie can be accessed by the browser.
+
+### Setting a Cookie Domain:
+
+```javascript
+document.cookie = "cookieName=cookieValue; domain=example.com";
+```
+
+- `cookieName=cookieValue`: Represents the name and value of the cookie.
+- `domain=example.com`: Specifies that the cookie is valid for the domain `example.com`.
+
+When you set a cookie with a specific domain, the cookie will be accessible to all subdomains of that domain as well. For example, if you set a cookie for `example.com`, it will be accessible to `subdomain.example.com` and any other subdomains of `example.com`.
+
+### Using Specific Subdomains:
+
+```javascript
+document.cookie = "cookieName=cookieValue; domain=sub.example.com";
+```
+
+Here, the cookie will only be accessible to the `sub.example.com` domain and not to its parent domain (`example.com`) or other subdomains.
+
+Be cautious when setting the `domain` attribute. If you set it too broadly (e.g., `.com`), it might cause security risks by allowing access to the cookie from unintended domains. Always set the domain attribute to the most specific domain or subdomain required for your application.
