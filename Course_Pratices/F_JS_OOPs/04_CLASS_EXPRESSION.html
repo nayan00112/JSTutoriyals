@@ -26,3 +26,32 @@
 </body>
 
 </html>
+
+<!-- 
+
+     This HTML file contains a simple JavaScript script within the <script> tags. Let me break it down for you:
+
+DOCTYPE and HTML Structure:
+
+<!DOCTYPE html>: Declares the document type and version of HTML used.
+<html lang="en">: The opening tag for an HTML document with the specified language.
+Head Section:
+
+<head>: Contains metadata such as character encoding, viewport settings, and the document title.
+<meta charset="UTF-8">: Defines the character encoding for the document as UTF-8.
+<meta http-equiv="X-UA-Compatible" content="IE=edge">: Provides directives to the browser on how to render the content.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Sets the viewport for responsive web design.
+<title>javascript class</title>: Sets the title of the HTML document displayed on the browser tab.
+Body Section:
+
+<body>: Contains the visible content of the web page.
+JavaScript Section:
+
+<script>: The opening tag for embedding JavaScript code.
+var emp = class { ... }: Defines a JavaScript class named emp using the class syntax. This class has a constructor method that initializes id with the value 23 and name with the string "Jenney".
+document.writeln("Hello " + emp.name): Attempts to write "Hello " followed by the name property of the emp class onto the document. However, this won't work as intended because emp here is a class, not an instance of the class. To access properties like name, you need to create an instance of the class first.
+The output would likely be "Hello undefined" since emp.name is being accessed directly from the class definition, not an instance of the class.
+
+The comment in your code seems to be asking why a specific output is appearing, which is likely due to attempting to access emp.name directly without instantiating the class first.
+
+ -->

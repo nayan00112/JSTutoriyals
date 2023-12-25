@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript class</title>
+</head>
+
+<body>
+    <script>
+
+        var emp = class {
+            constructor() {
+                this.id = 23;
+                this.n = "Jenney";
+                this.name = "Jenney";
+            }
+        };
+        document.writeln("Hello " + emp.n) // Output: Hello undefined
+        document.writeln("<br>Hello " + emp.name) // Output: Hello emp
+
+        let a = new emp()
+        document.write("<br>Hello "+ a.name + ", id is (" + a.id + ")") // Output: Hello Jenney, id is (23)
+        document.write("<br>Hello "+ a.n) // Output: Hello Jenney
+    </script>
+</body>
+
+</html>

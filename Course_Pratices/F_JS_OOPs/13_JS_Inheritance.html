@@ -37,3 +37,135 @@
 </body>
 
 </html>
+
+<!-- 
+    In JavaScript, inheritance is achieved through prototype-based inheritance. Objects in JavaScript can have a prototype object, and they inherit properties and methods from their prototype. Here's how inheritance works in JavaScript:
+
+### Prototype-Based Inheritance:
+
+1. **Prototype Chain:**
+   - Every JavaScript object has a prototype (except for the base object, `Object.prototype`).
+   - When you access a property or method on an object, JavaScript first checks if that property exists on the object itself. If it doesn't, it looks up the prototype chain until it finds the property or reaches the end of the chain.
+
+2. **Constructor Functions and Prototypes:**
+   - Constructor functions, coupled with prototypes, allow the creation of objects that inherit from other objects.
+   ```javascript
+   function Animal(name) {
+       this.name = name;
+   }
+
+   Animal.prototype.makeSound = function() {
+       return 'Some sound';
+   };
+
+   function Dog(name) {
+       Animal.call(this, name); // Call the parent constructor
+   }
+
+   Dog.prototype = Object.create(Animal.prototype); // Inherit from Animal prototype
+   Dog.prototype.constructor = Dog; // Set the constructor properly
+
+   Dog.prototype.bark = function() {
+       return 'Woof!';
+   };
+
+   const myDog = new Dog('Buddy');
+   console.log(myDog.name); // Outputs: Buddy
+   console.log(myDog.makeSound()); // Outputs: Some sound
+   console.log(myDog.bark()); // Outputs: Woof!
+   ```
+
+3. **ES6 Classes and Inheritance:**
+   - With the introduction of ES6 classes, inheritance becomes more intuitive using the `extends` keyword.
+   ```javascript
+   class Animal {
+       constructor(name) {
+           this.name = name;
+       }
+
+       makeSound() {
+           return 'Some sound';
+       }
+   }
+
+   class Dog extends Animal {
+       constructor(name) {
+           super(name); // Call the parent constructor
+       }
+
+       bark() {
+           return 'Woof!';
+       }
+   }
+
+   const myDog = new Dog('Buddy');
+   console.log(myDog.name); // Outputs: Buddy
+   console.log(myDog.makeSound()); // Outputs: Some sound
+   console.log(myDog.bark()); // Outputs: Woof!
+   ```
+
+In both cases, whether using constructor functions or ES6 classes, inheritance is achieved by linking objects together through their prototypes. Child objects have access to properties and methods defined in their parent objects (or prototypes). This mechanism allows for code reuse and the establishment of hierarchical relationships among objects in JavaScript.
+ -->
+
+ <!-- 
+    In classical object-oriented programming languages like C++, multiple inheritance allows a class to inherit properties and behavior from more than one parent class. However, JavaScript doesn't support multiple inheritance in the same way. Instead, it uses a different mechanism called "mixins" or "composition" to achieve similar results.
+
+### Mixins and Composition in JavaScript:
+
+1. **Mixins:**
+   - Mixins are a way to extend functionality by combining multiple objects or behaviors into a single object.
+   - You can create separate objects (mixins) that contain specific functionalities and then combine them into a single object.
+   ```javascript
+   // Mixin objects
+   const swimmer = {
+       swim() {
+           console.log('Swimming...');
+       }
+   };
+
+   const climber = {
+       climb() {
+           console.log('Climbing...');
+       }
+   };
+
+   // Creating an object using mixins
+   const athlete = Object.assign({}, swimmer, climber);
+
+   athlete.swim(); // Outputs: Swimming...
+   athlete.climb(); // Outputs: Climbing...
+   ```
+
+2. **Composition:**
+   - Composition involves creating new objects by composing them using other objects.
+   - Objects are combined by assigning properties of one object to another or by using factories to create new objects that use existing objects.
+   ```javascript
+   // Parent objects
+   const swimmer = {
+       swim() {
+           console.log('Swimming...');
+       }
+   };
+
+   const climber = {
+       climb() {
+           console.log('Climbing...');
+       }
+   };
+
+   // Composing a new object
+   function createAthlete() {
+       return {
+           ...swimmer,
+           ...climber
+       };
+   }
+
+   const athlete = createAthlete();
+
+   athlete.swim(); // Outputs: Swimming...
+   athlete.climb(); // Outputs: Climbing...
+   ```
+
+While JavaScript doesn't directly support multiple inheritance as some other languages do, the concept can be achieved through mixins, composition, or using a combination of techniques involving object composition and prototypes. These approaches allow for creating objects with functionalities from multiple sources, simulating aspects of multiple inheritance.
+  -->

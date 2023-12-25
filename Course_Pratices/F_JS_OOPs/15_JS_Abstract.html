@@ -61,3 +61,74 @@ but derived classes can extend and implement their own versions of the abstract 
 </body>
 
 </html>
+
+<!-- JavaScript doesn't have built-in support for abstract classes like some other programming languages such as Java or C#. However, you can implement abstract-like behavior through various techniques like using conventions, interfaces, or class structures.
+
+### Emulating Abstract Classes in JavaScript:
+
+1. **Using Conventions:**
+   - Conventionally, you can create a base class and throw an error in its abstract methods, signaling that these methods need to be implemented by derived classes.
+   ```javascript
+   class Shape {
+       calculateArea() {
+           throw new Error('Abstract method must be implemented');
+       }
+   }
+
+   class Circle extends Shape {
+       calculateArea() {
+           // Implement calculateArea() for Circle
+           // Calculate area logic here
+       }
+   }
+
+   const shape = new Shape(); // Throws an error if the abstract method is not implemented
+   const circle = new Circle(); // Implements the abstract method
+   ```
+
+2. **Using Function Contracts (Interfaces):**
+   - JavaScript doesn't have native interfaces, but you can create a contract using comments or explicit checks to ensure specific methods are implemented.
+   ```javascript
+   // Interface-like contract
+   class IShape {
+       calculateArea() {
+           throw new Error('Method not implemented');
+       }
+   }
+
+   class Circle extends IShape {
+       calculateArea() {
+           // Implement calculateArea() for Circle
+           // Calculate area logic here
+       }
+   }
+
+   const shape = new IShape(); // Throws an error as it's not meant to be instantiated directly
+   const circle = new Circle(); // Implements the required method
+   ```
+
+3. **Using Factories:**
+   - Another approach is to use factories that return objects with enforced methods.
+   ```javascript
+   function createShape() {
+       return {
+           calculateArea() {
+               throw new Error('Method not implemented');
+           }
+       };
+   }
+
+   function createCircle() {
+       const shape = createShape();
+       shape.calculateArea = function() {
+           // Implement calculateArea() for Circle
+           // Calculate area logic here
+       };
+       return shape;
+   }
+
+   const shape = createShape(); // Throws an error if calculateArea() is not implemented
+   const circle = createCircle(); // Implements the required method
+   ```
+
+While JavaScript doesn't have a specific syntax for abstract classes or interfaces, these approaches help mimic their behavior by setting expectations for certain methods to be implemented in derived classes or objects. Developers can use these patterns to achieve similar concepts of abstraction and contracts within their JavaScript code. -->

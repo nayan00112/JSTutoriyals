@@ -41,3 +41,80 @@
 
 </body>
 </html>
+
+<!-- 
+    In JavaScript, encapsulation involves bundling the data (variables) and the methods (functions) that operate on the data within a single unit, usually an object. While JavaScript doesn't have native access modifiers like public, private, or protected as in some other languages, it still employs encapsulation principles through various techniques. Here's how encapsulation can be achieved in JavaScript:
+
+1. **Using Closures:**
+   - JavaScript closures allow for private variables and functions. By creating functions within another function, inner functions have access to the variables defined in the outer function's scope, but these variables aren't directly accessible from outside the function.
+   ```javascript
+   function createCounter() {
+       let count = 0; // Private variable
+
+       return {
+           increment: function() {
+               count++;
+           },
+           getCount: function() {
+               return count;
+           }
+       };
+   }
+
+   const counter = createCounter();
+   counter.increment();
+   console.log(counter.getCount()); // Outputs: 1
+   // console.log(counter.count); // Error: count is not accessible
+   ```
+
+2. **Using Constructor Functions and `this`:**
+   - Constructor functions and the `this` keyword can be used to create objects with public and private properties/methods. Properties/methods added using `this` become public, while variables defined within the constructor remain private.
+   ```javascript
+   function Person(name, age) {
+       // Private properties
+       let privateAge = age;
+
+       // Public properties
+       this.name = name;
+
+       // Public method accessing private variable
+       this.getAge = function() {
+           return privateAge;
+       };
+
+       // Public method modifying private variable
+       this.changeAge = function(newAge) {
+           privateAge = newAge;
+       };
+   }
+
+   const john = new Person('John', 30);
+   console.log(john.name); // Accessing public property
+   console.log(john.getAge()); // Accessing private variable through a public method
+   john.changeAge(35); // Modifying private variable through a public method
+   console.log(john.getAge()); // Outputs: 35
+   ```
+
+3. **Using ES6 Classes:**
+   - With ES6, JavaScript introduced class syntax which provides a clearer way to define encapsulated objects.
+   ```javascript
+   class Car {
+       #speed = 0; // Private field
+
+       accelerate() {
+           this.#speed += 10;
+       }
+
+       getSpeed() {
+           return this.#speed;
+       }
+   }
+
+   const myCar = new Car();
+   myCar.accelerate();
+   console.log(myCar.getSpeed()); // Outputs: 10
+   // console.log(myCar.#speed); // Error: Private field is not accessible
+   ```
+
+These approaches illustrate how encapsulation can be achieved in JavaScript, emphasizing the control of access to certain data and methods within an object, either by closures, constructor functions, or using ES6 classes and private fields.
+ -->

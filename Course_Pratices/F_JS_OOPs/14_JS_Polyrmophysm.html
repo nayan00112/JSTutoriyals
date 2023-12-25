@@ -45,3 +45,66 @@
 </body>
 
 </html>
+
+<!-- 
+    Polymorphism, in the context of object-oriented programming, refers to the ability of different objects to be treated as instances of the same class but behave differently based on their own implementation of methods. In JavaScript, polymorphism can be achieved through method overriding and using the same method name across different classes or prototypes.
+
+### Polymorphism in JavaScript:
+
+1. **Method Overriding:**
+   - When a method is defined in both a parent and child class, the child class's method overrides the parent class's method.
+   ```javascript
+   class Animal {
+       makeSound() {
+           return 'Some sound';
+       }
+   }
+
+   class Dog extends Animal {
+       makeSound() {
+           return 'Woof!';
+       }
+   }
+
+   class Cat extends Animal {
+       makeSound() {
+           return 'Meow!';
+       }
+   }
+
+   const myDog = new Dog();
+   const myCat = new Cat();
+
+   console.log(myDog.makeSound()); // Outputs: Woof!
+   console.log(myCat.makeSound()); // Outputs: Meow!
+   ```
+
+2. **Using Prototypes:**
+   - JavaScript allows objects to share methods through prototypes. By changing the implementation of a method for a specific object, you achieve polymorphic behavior.
+   ```javascript
+   function Animal() {}
+   Animal.prototype.makeSound = function() {
+       return 'Some sound';
+   };
+
+   function Dog() {}
+   Dog.prototype = Object.create(Animal.prototype);
+   Dog.prototype.makeSound = function() {
+       return 'Woof!';
+   };
+
+   function Cat() {}
+   Cat.prototype = Object.create(Animal.prototype);
+   Cat.prototype.makeSound = function() {
+       return 'Meow!';
+   };
+
+   const myDog = new Dog();
+   const myCat = new Cat();
+
+   console.log(myDog.makeSound()); // Outputs: Woof!
+   console.log(myCat.makeSound()); // Outputs: Meow!
+   ```
+
+In both examples, different instances of the `Animal`, `Dog`, and `Cat` classes or prototypes share a common method name `makeSound`, but each instance has its own implementation of that method, allowing for polymorphic behavior. When a method is called on different objects of related classes, the method behaves differently based on the object it's called on. This flexibility and behavior based on object instances represent polymorphism in JavaScript.
+ -->
