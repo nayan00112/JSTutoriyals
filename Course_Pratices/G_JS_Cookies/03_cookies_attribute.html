@@ -1,1 +1,40 @@
 <!-- https://www.javatpoint.com/javascript-cookie-attributes -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+
+<body>
+    <script>
+        let d = new Date();
+
+        function setCookie() {
+            let nameText = prompt("Enter Name: ");
+            // expires:	It maintains the state of a cookie up to the specified date and time.
+            document.cookie = "name=" + nameText + ";expires=" + d.getUTCDate() + 2 +";";
+            // ecpire cookie after two days.
+        }
+
+        function getCookies() {
+            document.write("<b>" + document.cookie + "</b>");
+        }
+
+        function deletCookies() {
+            // max-age:	It maintains the state of a cookie up to the specified time. Here, time is given in seconds.
+            document.cookie = document.cookie + ";max-age=0";
+        }
+
+
+        // path:	It expands the scope of the cookie to all the pages of a website.
+
+        // domain:	It is used to specify the domain for which the cookie is valid.
+
+
+    </script>
+</body>
+
+</html>
