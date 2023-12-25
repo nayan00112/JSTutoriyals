@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+    <style>
+        body {
+            background-color: rgb(10, 28, 43);
+            color: aliceblue;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        div {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function storecookies() {
+            let name = document.form1.name.value;
+            let email = document.form1.email.value;
+            let course = document.form1.course.value;
+
+            let obj = {} // Create empty/custom object
+            obj.name = name;
+            obj.email = email;
+            obj.course = course;
+            console.log(obj);
+
+            let jsonString = JSON.stringify(obj)
+            console.log(jsonString);
+
+
+            document.cookie = jsonString;
+        }
+
+        function getcookie(){
+            document.getElementById("printcookies").innerText = document.cookie;
+        }
+    </script>
+
+    <div>
+        <h1>Form</h1>
+    </div>
+    <hr>
+    <div>
+        <form onsubmit="storecookies()" name="form1">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course" required>
+            </div>
+            <div>
+                <input type="submit" value="store cookies">
+            </div>
+        </form>
+        <div>
+            <button onclick="getcookie()">Get cookies</button>
+        </div>
+    </div>
+    <hr>
+    <div id="printcookies">
+
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    Output:
+    
+    All data are stored.
+-->
