@@ -1,0 +1,140 @@
+<!-- 
+    1. focus (onfocus)
+        When the user focuses on an eelment.
+    
+    2. submit (on submit)
+        When the user submits the form.
+    
+    3. blur (onblur)
+        When the focus is away from a from element.
+
+    4. change (onchange)
+        When the user modifies or changes the value of a form element.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form events</title>
+</head>
+<style>
+    body {
+        background-color: rgb(20, 25, 29);
+        color: white;
+    }
+
+    #submit {
+        padding: 4px;
+        border: 2px solid yellowgreen;
+        border-radius: 4px;
+        background-color: rgb(20, 25, 29);
+        color: yellowgreen;
+    }
+
+    #submit:hover {
+        background-color: rgba(153, 205, 50, 0.248);
+        color: rgb(255, 255, 255);
+    }
+
+    .colorygreen {
+        color: yellowgreen;
+    }
+
+    .colorred {
+        color: rgb(255, 72, 72);
+    }
+
+    .colordarkgreen {
+        color: rgb(0, 172, 0);
+    }
+
+    .coloryellow {
+        color: rgb(255, 255, 136);
+    }
+
+    div {
+        padding: 4px 0px;
+    }
+</style>
+<script>
+    function onfocus_name() {
+        document.getElementById("nameid_div").innerHTML = "<label for='fname'>First Name:</label>" + " <b class='colorygreen'>Enter Your First Name!</b>"
+    }
+
+    function onblur_name() {
+        let a = document.myform.fname.value;
+        if (a != "") {
+            document.getElementById("nameid_div").innerHTML = "<label for='fname'>First Name:</label>" + "<b class='colordarkgreen'>Great!!!</b>"
+
+        }
+        else {
+            document.getElementById("nameid_div").innerHTML = "<label for='fname'>First Name:</label>" + "<b class='colorred'>Enter Your Last Name!!!</b>"
+        }
+    }
+
+    function onfocus_lname() {
+        document.getElementById("lname_div").innerHTML = "<label for='lname'>Last Name:</label>" + "<b class='colorygreen'>Enter Your Last Name!</b>"
+    }
+
+    function onblur_lname() {
+        let a = document.myform.lname.value;
+        if (a != "") {
+            document.getElementById("lname_div").innerHTML = "<label for='lname'>Last Name:</label>" + "<b class='colordarkgreen'>Great!!!</b>"
+        }
+        else {
+            document.getElementById("lname_div").innerHTML = "<label for='lname'>Last Name:</label>" + "<b class='colorred'>Enter Your Last Name!!!</b>"
+        }
+    }
+
+    function onchanged_group() {
+        document.getElementById("group_id").innerHTML = "<label for='group'>Group:</label>" + "<b class='coloryellow'>Changed!!!</b>"
+    }
+
+    function myformfun() {
+        fn = document.myform.fname.value;
+        ln = document.myform.lname.value;
+        alert("First Name: " + fn + " Last Name: " + ln + ".");
+    }
+
+</script>
+
+<body>
+    <div>
+        <form action="" name="myform" onsubmit="myformfun()">
+            <h2 class="colorygreen">
+                Hello Form!
+            </h2>
+            <div id="nameid_div">
+                <label for="fname">First Name:</label>
+            </div>
+            <div>
+                <input type="text" name="fname" id="fname" onfocus="onfocus_name()" onblur="onblur_name()" required>
+            </div>
+            <div id="lname_div">
+                <label for="lname">Last Name:</label>
+            </div>
+            <div>
+                <input type="text" name="lname" id="lname" onfocus="onfocus_lname()" onblur="onblur_lname()" required>
+            </div>
+            <div id="group_id">
+                <label for="group">Group:</label>
+            </div>
+            <div>
+                <select name="group" id="group" onchange="onchanged_group()" required>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
