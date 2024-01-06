@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw Statement</title>
+    <script>
+        function fun() {
+            try {
+                let a = Number(document.getElementById("t").value);
+
+                if (a % 2 == 0) {
+                    b.style.color="green";
+                    document.getElementById("res").innerHTML = "Valid";
+                }
+                else {
+                    b.style.color="red";
+                    throw new Error("This is throw error keywords, Odd number is not allow!")
+                }
+            }
+            catch (e) {
+                document.getElementById("res").innerHTML = e.message;
+            }
+        }
+    </script>
+</head>
+
+<body id="b">
+    <label for="t">Input Even Number</label>
+    <input type="number" name="t" id="t">
+    <button onclick="fun()">Submit</button>
+    <div id="res"></div>
+</body>
+
+</html>

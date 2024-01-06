@@ -1,0 +1,51 @@
+<!-- now lets make syntex error that catch using try... catch... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count = 0;
+        function calformfun(){
+            try{
+                let num1 = Number(document.getElementById("num1").value); // ERROR
+                let num2 = Number(document.getElementById("num2").value);
+                let res = num1 / num2;
+                document.getElementById("ans").innerHTML = res;
+            }
+            catch(e){
+                document.getElementById("ans").innerHTML = "<span style='color:red;'>" + e.message; + "</span>";
+            }
+            finally{
+                alert("Thank you for using...");
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Division Calculator</h1>
+        <span>Number 1 ÷ Number 2</span>
+        <!-- https://symbolsdb.com/division-symbol -->
+    </div>
+    <div>
+            <div>
+                <span id="ans">0</span>
+            </div>
+            <div>
+                <label for="num1">Number 1:</label>
+                <input type="number" name="num1" id="num1">
+            </div>
+            <div>
+                <label for="num2">Number 2:</label>
+                <input type="number" name="num2" id="num2">
+            </div>
+            <div>
+                <button onclick="calformfun()">Calculate</button>
+            </div>
+    </div>
+
+</body>
+</html>

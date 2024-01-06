@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calformfun(){
+            
+            // Here, I thought that the divide by 0 is throws an error, but in js, it return "Infinity", not an error. so in this catch only execute when there is not a number but a string. 
+
+            try{
+                let num1 = Number(document.getElementById("num1").value);
+                let num2 = Number(document.getElementById("num2").value);
+                let res = num1 / num2;
+                document.getElementById("ans").innerHTML = res;
+            }
+            catch(e){
+                document.getElementById("ans").innerHTML = "<span style='color:red;'>Error: Cannot divid 0. </span>" + e.message;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Division Calculator</h1>
+        <span>Number 1 ÷ Number 2</span>
+        <!-- https://symbolsdb.com/division-symbol -->
+    </div>
+    <div>
+            <div>
+                <span id="ans">0</span>
+            </div>
+            <div>
+                <label for="num1">Number 1:</label>
+
+                <!-- We are allowing the not number value for handeling catch an error. -->
+                <!-- but but but its return NaN -->
+
+                <!-- JS is smart! -->
+
+                <input type="number" name="num1" id="num1">
+                <!-- <input type="text" name="num1" id="num1"> -->
+            </div>
+            <div>
+                <label for="num2">Number 2:</label>
+                <input type="number" name="num2" id="num2">
+                <!-- <input type="text" name="num2" id="num2"> -->
+            </div>
+            <div>
+                <button onclick="calformfun()">Calculate</button>
+            </div>
+    </div>
+
+</body>
+</html>
+
+<!-- now lets make syntex error that catch using try... catch... -->
+<!-- visite next... -->
