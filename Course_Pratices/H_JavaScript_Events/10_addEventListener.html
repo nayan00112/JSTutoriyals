@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="page">
+    <div>
+        <h1>Hello All!</h1>
+    </div>
+    <div>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis facilis itaque similique!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam qui voluptatem, adipisci expedita ullam est ipsam officia quos animi atque assumenda, officiis commodi?</p>
+    </div>
+<div id="btn_id">
+    <button id="btn_d">Dark mode</button>
+    <button id="btn_l" style="display: none;">Light mode</button>
+</div>
+    <script>
+        document.getElementById("btn_d").addEventListener("click", function(){
+            page.style.color="white";
+            page.style.background="#152238"
+            btn_d.style.display = "none";
+            btn_l.style.display = "block";
+        })
+
+        document.getElementById("btn_l").addEventListener("click", function(){
+            page.style.color="black";
+            page.style.background="white"
+            btn_d.style.display = "block";
+            btn_l.style.display = "none";
+        })
+    </script>
+</body>
+</html>

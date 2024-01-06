@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 6px 0px;
+        }
+    </style>
+</head>
+
+<body id="e">
+    <div>
+        <h1>Hello All</h1>
+    </div>
+    <div id="text_p">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint adipisci eos quas iure sed non cumque veniam
+            nihil perspiciatis ad, itaque velit iste voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia rem consequuntur.
+        </p>
+    </div>
+    <div><button onclick="myMode()" id="bt">Dark Mode</button></div>
+    <div><button onclick="font_size_up()">Font Size Up</button></div>
+    <div><button onclick="font_size_down()">Font Size Down</button></div>
+
+    <script>
+
+
+        let mode = "Light";
+
+        function myMode() {
+            //let e = document.getElementsByClassName("body")[0]
+            if (mode == "Light") {
+                e.style.color = "white";
+                e.style.background = "#152238";
+                mode = "Dark";
+                document.getElementById("bt").innerHTML = "Light Mode";
+            }
+            else {
+                e.style.color = "#152238";
+                e.style.background = "white";
+                mode = "Light"
+                document.getElementById("bt").innerHTML = "Dark Mode"
+            }
+        }
+
+        let a = 14;
+        // a is font size
+
+        function font_size_up() {
+            if (a < 24) {
+                a = a + 1;
+                text_p.style.fontSize = a + "px";
+            }
+        }
+        function font_size_down() {
+            if (a > 6) {
+                a = a - 1;
+                text_p.style.fontSize = a + "px";
+            }
+        }
+
+        window.onload = function () {
+            text_p.style.fontSize = a + "px";
+            text_p.style.fontFamily = "Arial"
+        }
+    </script>
+</body>
+
+</html>

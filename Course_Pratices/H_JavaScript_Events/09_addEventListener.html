@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <button id="but">Click me!</button>
+    </div>
+    <script>
+        document.getElementById("but").addEventListener("click", clickme);
+        function clickme(){
+            alert("Hello!");
+            but.style.color="red";
+        }
+    </script>
+    <!-- in this case, script tag works in body tage only, not in head -->
+</body>
+</html>
