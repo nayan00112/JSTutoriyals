@@ -1,0 +1,54 @@
+<!-- 
+    1. load (onload)
+        When the browser finishes the loading of the page
+
+    2. unload (onunload)
+        When the visiter leaves the current webpage, the browser unloads it.
+    
+    3. resize (onresize)
+        when the visitor resize the window of the browser.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // onload way 1:
+        // window.onload = function()
+        // {
+        //     document.getElementById("uid").innerHTML= "Webpage loaded successfully...";
+        // }
+
+        // Way 2:
+        window.addEventListener("load", function(){
+            document.getElementById("uid").innerHTML= "Webpage loaded successfully...";
+        })
+
+        window.onunload = function(){
+            document.getElementsByClassName("body")[0].innerHTML = "<div style='height:500px; width:600px; background-color:red;'></div>"
+        }
+
+        window.addEventListener("resize", function(){
+            let h = window.screen.height;
+            let w = window.screen.width;
+            // Work only at inspact in browser. :)
+            document.getElementById("uid").innerHTML= "height: " + h + "<br>width: " + w;
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Heading...</h1>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis minima neque quaerat labore, ipsa repellat doloribus, quia sit enim consequuntur, esse nobis vero voluptatibus?</p>
+    </div>
+    
+    <div id="uid" onload="">
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2023/12/01/21/50/sunset-8424565_1280.jpg" alt="" height="400px">
+
+</body>
+</html>
