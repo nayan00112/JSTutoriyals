@@ -1,0 +1,26 @@
+<!-- 
+   In globle context, variable are declare outside the function.
+   Here, this keyword refers to the window object.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var email = "email124@e.c"; // worked
+        // let email = "email124@e.c"; // not work // why?
+        function oky() {
+            document.write("Email is " + this.email)
+        }
+        oky();
+    </script>
+</body>
+
+</html>

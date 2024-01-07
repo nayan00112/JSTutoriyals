@@ -1,0 +1,31 @@
+<!-- 
+    this keyword is a referance variable that refers to the current object.
+    Here, we will learn about this keyword with help of different examples.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let info = {
+            "email": "testeml123@g.c",
+            "phone_no": "9878767656",
+            "oky": function () {
+                return ("Email is: " + this.email)
+            }
+        }
+
+        let fatch = info.oky();
+        document.write(fatch);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The call() and applay() methid allows us to write a method that can be used on different objects. -->
+    <script>
+        var emp = {
+            fulladdress : function(){
+                return this.name + " " + this.compnay
+            }
+        }
+        var addr={
+            "name":"John",
+            "compnay":"ABC"
+        }
+
+        document.write(emp.fulladdress.call(addr));
+        document.write("------------------------------------")
+        document.write(emp.fulladdress.apply(addr));
+    </script>
+</body>
+</html>
+
+<!-- 
+    `call()` and `apply()` are both methods in JavaScript that allow you to invoke functions while explicitly setting the context (the value of `this`) and passing arguments to the function.
+
+### `call()`
+
+The `call()` method invokes a function with a specified `this` value and individual arguments.
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}! My name is ${this.name}.`);
+}
+
+const person = {
+  name: 'Alice'
+};
+
+// Using call() to invoke the greet function with the context of the 'person' object
+greet.call(person, 'Bob');
+// Output: Hello, Bob! My name is Alice.
+```
+
+In this example, `call()` is used to execute the `greet()` function within the context of the `person` object. The first argument (`person`) sets the value of `this` within the `greet()` function, and subsequent arguments (`'Bob'`) are passed as individual arguments to the `greet()` function.
+
+### `apply()`
+
+The `apply()` method is similar to `call()`, but it takes arguments as an array or an array-like object.
+
+```javascript
+function greet(name, age) {
+  console.log(`Hello, ${name}! I'm ${this.name} and I'm ${age} years old.`);
+}
+
+const person = {
+  name: 'Alice'
+};
+
+const args = ['Bob', 25];
+
+// Using apply() to invoke the greet function with the context of the 'person' object
+greet.apply(person, args);
+// Output: Hello, Bob! I'm Alice and I'm 25 years old.
+```
+
+In this example, `apply()` is used to execute the `greet()` function within the context of the `person` object. The first argument (`person`) sets the value of `this` within the `greet()` function, and the second argument (`args`) is an array containing the arguments to be passed to the `greet()` function.
+
+### Differences
+
+The primary difference between `call()` and `apply()` lies in how arguments are passed to the function being called. `call()` accepts individual arguments, while `apply()` takes an array or array-like object of arguments.
+
+```javascript
+// Using call() with individual arguments
+someFunction.call(context, arg1, arg2, arg3);
+
+// Using apply() with an array-like object of arguments
+someFunction.apply(context, [arg1, arg2, arg3]);
+```
+
+Both `call()` and `apply()` allow you to set the context (`this`) explicitly when invoking a function and pass arguments to that function. These methods are particularly useful when you want to borrow methods from other objects, maintain context, or dynamically pass arguments to functions.
+ -->

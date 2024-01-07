@@ -1,0 +1,81 @@
+
+
+
+<!-- NEED TO SEE AGAIN -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: 'Alice',
+            greet: function () {
+                console.log(`Hello, I'm ${this.name}.`);
+            }
+        };
+
+        const greetFunction = person.greet;
+        greetFunction(); // Output: Hello, I'm undefined.
+
+        const boundGreetFunction = person.greet.bind(person);
+        boundGreetFunction(); // Output: Hello, I'm Alice.
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    In JavaScript, the `bind()` method creates a new function that, when called, has its `this` keyword set to a specific value and allows you to permanently bind arguments to the function.
+
+### Basic Usage:
+
+```javascript
+const person = {
+  name: 'Alice',
+  greet: function() {
+    console.log(`Hello, I'm ${this.name}.`);
+  }
+};
+
+const greetFunction = person.greet;
+greetFunction(); // Output: Hello, I'm undefined.
+
+const boundGreetFunction = person.greet.bind(person);
+boundGreetFunction(); // Output: Hello, I'm Alice.
+```
+
+Here's what's happening:
+
+- Initially, `greetFunction` is a reference to the `greet` function inside the `person` object. However, when you call `greetFunction()` without binding its `this` context explicitly, it loses its connection to the `person` object, and `this` becomes undefined or points to the global object (in non-strict mode).
+  
+- Using `bind()`, you create a new function `boundGreetFunction` that ensures `this` is permanently set to `person` when the function is invoked.
+
+### Binding Arguments:
+
+You can also use `bind()` to bind arguments to a function. Any arguments passed after the context argument in `bind()` will become permanent arguments for the function:
+
+```javascript
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, I'm ${this.name}${punctuation}`);
+}
+
+const boundGreet = greet.bind(person, 'Hi');
+boundGreet('!'); // Output: Hi, I'm Alice!
+```
+
+In this example, the `greet` function is bound to the `person` object as `this`, and the string `'Hi'` is bound as the first argument. When calling `boundGreet('!')`, the additional `'!'` argument is appended to the bound arguments.
+
+### Key Points:
+
+- `bind()` doesn't invoke the function; it returns a new function with the specified context and arguments.
+- It's useful for setting the `this` value in methods and preserving that context.
+- Bound arguments are appended when the bound function is called.
+
+`bind()` is valuable when you want to create a new function with a specific context or predefined arguments, especially when working with event handlers, callbacks, or situations where you need to ensure a consistent context for a function.
+ -->
