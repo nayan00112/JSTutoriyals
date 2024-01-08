@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>removeAttribute_method</title>
+    <style>
+        .redtext {
+            color: red;
+        }
+
+        .greentext {
+            color: green;
+        }
+
+        .ff {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>removeAttribute_method</h1>
+    </div>
+
+    <div>
+        <p id="p1" class="ff redtext" style="background-color: azure;">pragraph 1</p>
+        <p id="p2" class="greentext" style="background-color: rgb(137, 190, 190);">pragraph 2</p>
+        <p id="p3" class="redtext" style="background-color: rgb(41, 220, 220);">pragraph 3</p>
+        <p id="p4" class="ff redtext" style="background-color: rgb(30, 165, 165);">pragraph 4</p>
+    </div>
+    <button onclick="delp1()">Remove class attribute for pragraph 1</button><br>
+    <button onclick="delp2()">Remove class attribute for pragraph 2</button><br>
+    <button onclick="delp3()">Remove class attribute for pragraph 3</button><br>
+    <button onclick="delp4()">Remove class attribute for pragraph 4</button><br>
+    <script>
+        function delp1() {
+            document.getElementById("p1").removeAttribute("class");
+        }
+        
+        function delp2() {
+            document.getElementById("p2").removeAttribute("class");
+        }
+
+        function delp3() {
+            document.getElementById("p3").removeAttribute("class");
+        }
+
+        function delp4() {
+            document.getElementById("p4").removeAttribute("class");
+        }
+
+    </script>
+</body>
+
+</html>

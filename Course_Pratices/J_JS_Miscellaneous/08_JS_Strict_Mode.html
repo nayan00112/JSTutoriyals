@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Strict Mode</title>
+</head>
+<body>
+    With Strice mode:
+    <script>
+        "use trict";
+        a = 25;
+        document.write(a);
+    </script>
+</body>
+</html>
+
+<!-- 
+    JavaScript strict mode is a way to opt into a restricted variant of JavaScript. It helps you write more robust code by catching common coding mistakes and preventing potentially problematic features from being used. 
+
+To enable strict mode, you simply add the following line at the beginning of your JavaScript file or within a function:
+
+```javascript
+'use strict';
+```
+
+For example:
+
+```javascript
+'use strict';
+
+// your code here
+```
+
+When strict mode is enabled:
+
+1. **Variables:** Variables must be declared (`var`, `let`, `const`) before they are assigned values. Assigning values to undeclared variables will throw an error.
+
+2. **Unused variables:** Using variable names that are reserved for future JavaScript versions (e.g., `eval`, `arguments`, `implements`, `interface`, `package`, `protected`, `static`, `yield`) will throw an error.
+
+3. **Octal syntax:** Octal syntax (e.g., using `08` or `09` as numeric literals) is not allowed. In non-strict mode, JavaScript would interpret numbers with leading zeros as octal, which can lead to unexpected behavior.
+
+4. **Deleting variables or functions:** Attempting to delete variables, functions, or function arguments throws an error.
+
+5. **Eval and arguments:** Using `eval()` as well as the `arguments` object as variables or function arguments is restricted.
+
+6. **Global this:** In strict mode, `this` in functions refers to `undefined` when the function is invoked without an object. In non-strict mode, `this` would refer to the global object (`window` in browsers).
+
+Strict mode helps catch errors early, making your code more reliable and assisting in writing cleaner, more maintainable JavaScript. It's generally recommended to use strict mode in your JavaScript code to avoid common pitfalls and promote better practices.
+ -->

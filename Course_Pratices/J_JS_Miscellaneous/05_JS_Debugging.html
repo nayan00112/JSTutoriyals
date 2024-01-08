@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        To perform debugging, we can use any of the following approaches:
+        <dl>
+            <dt>Using console.log() method</dt>
+            <dd>The console.log() method then result in the console of the browser.
+                If there in any mistake in the code, it generaters the error message.
+            </dd>
+            <dt>Using debugger keyword</dt>
+            <dd>In debugging, generally we set breakpoint to examine each link of code step by step. There is no requirement to perform this task manually in JavaScript.</dd>
+        </dl>
+    </div>
+    <script>
+        // Using debugger keyword
+        var a = 34;
+        var b = 45;
+        var res = a + b;
+
+        debugger;
+
+        document.write(Z);
+        document.write(X); // error: Uncaught ReferenceError: Z is not defined
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+    Debugging in JavaScript is crucial for identifying and fixing errors in your code. There are several ways to debug JavaScript code:
+
+1. **Console.log():** One of the simplest ways to debug is by using `console.log()` statements. You can add these statements in your code to print out variable values, object properties, or messages to the console to track the flow of your code.
+
+    ```javascript
+    let x = 5;
+    console.log('The value of x is: ', x);
+    ```
+
+2. **Debugger Statement:** Placing the `debugger;` statement within your code will pause the execution at that point if your browser's developer tools are open. This allows you to inspect variables, check the call stack, and step through your code.
+
+    ```javascript
+    let x = 5;
+    debugger;
+    console.log('The value of x is: ', x);
+    ```
+
+3. **Browser Developer Tools:** Modern browsers come with built-in developer tools that include robust debugging features. You can access these tools by right-clicking on a webpage, selecting "Inspect" or by pressing `F12` or `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Option+I` (Mac) and navigating to the "Console" or "Sources" tab.
+
+4. **Breakpoints:** You can set breakpoints in your code using the debugger tools by clicking on the line number where you want the execution to pause. This allows you to inspect the state of variables and the call stack at that point.
+
+5. **Error Messages:** Pay attention to error messages in the console. They often indicate the type of error and the location where it occurred, helping you pinpoint issues in your code.
+
+6. **Try/Catch Blocks:** Use `try` and `catch` blocks to handle exceptions and log or handle errors gracefully.
+
+    ```javascript
+    try {
+        // code that might throw an error
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+    ```
+
+7. **Logging:** Use specific logging methods (`console.error()`, `console.warn()`, `console.info()`) to differentiate between types of messages and errors in the console.
+
+8. **Linting and Debugging Tools:** Use tools like ESLint, JSHint, or IDE extensions (e.g., Visual Studio Code with extensions like Debugger for Chrome/Firefox) to catch potential errors and help debug your code.
+
+When debugging, start by identifying where the issue might be occurring, use a systematic approach to isolate the problem, and leverage these tools to understand the state of your code as it executes.
+
+
+ -->

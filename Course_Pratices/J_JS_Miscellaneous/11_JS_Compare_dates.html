@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>JS_Compare_dates</title>
+</head>
+
+<body>
+    <div>
+        <h1>JS_Compare_dates</h1>
+    </div>
+    <script>
+        var nowdate = new Date();
+        document.write("<br>toString: " + nowdate.toString());
+        document.write("<br>getDate: " + nowdate.getDate());
+        document.write("<br>getDay: " + nowdate.getDay());
+        document.write("<br>getFullYear: " + nowdate.getFullYear());
+        document.write("<br>getHours: " + nowdate.getHours());
+        document.write("<br>getMilliseconds: " + nowdate.getMilliseconds());
+        document.write("<br>getMinutes: " + nowdate.getMinutes());
+        document.write("<br>getMonth: " + nowdate.getMonth());
+        document.write("<br>getSeconds: " + nowdate.getSeconds());
+        document.write("<br>getTime: " + nowdate.getTime());
+        document.write("<br>getTimezoneOffset: " + nowdate.getTimezoneOffset());
+        document.write("<br>getUTCDate: " + nowdate.getUTCDate());
+        document.write("<br>getUTCDay: " + nowdate.getUTCDay());
+        document.write("<br>getUTCFullYear: " + nowdate.getUTCFullYear());
+        document.write("<br>getUTCHours: " + nowdate.getUTCHours());
+        document.write("<br>getUTCMilliseconds: " + nowdate.getUTCMilliseconds());
+        document.write("<br>getUTCMinutes: " + nowdate.getUTCMinutes());
+        document.write("<br>getUTCMonth: " + nowdate.getUTCMonth());
+        document.write("<br>getUTCSeconds: " + nowdate.getUTCSeconds());
+        // document.write("<br>getVarDate: "+nowdate.getVarDate());
+        document.write("<br>setDate(12): " + nowdate.setDate(12));
+        document.write("<br>getDate(12): " + nowdate.getDate());
+        document.write("<br>toString: " + nowdate.toString());
+        // document.write("<br>"+nowdate());
+
+        // Compare date
+        var x = new Date("2024-01-08") //yyyy-mm-dd
+        document.write("<br>" + x);
+
+        var y = new Date("2024-01-09") //yyyy-mm-dd
+        document.write("<br>" + y);
+
+        document.write("<br><br>" + (x > y));
+        if (x > y) {
+            document.write("<br>" + x);
+        }
+        else {
+            document.write("<br>" + y);
+        }
+
+        // Manualy date formate: dd-yyy-mm
+        document.write("<br>Manualy date formate: dd-yyy-mm: ")
+        document.write(x.getDate() +"-"+ x.getFullYear() +"-"+ x.getMonth());
+    </script>
+</body>
+
+</html>
+
+<!-- 
+Hello, this is Bing. I can help you with your question. 😊
+
+The getMonth() method in JavaScript returns the month of a date as a number from 0 to 11, where 0 is January and 11 is December1. This is useful for indexing into arrays of month names, for example:
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const date = new Date();
+const monthName = months[date.getMonth()];
+console.log(monthName); // prints the current month name
+
+If you want to get the month as a number from 1 to 12, you can simply add 1 to the result of getMonth(), for example:
+
+const date = new Date();
+const monthNumber = date.getMonth() + 1;
+console.log(monthNumber); // prints the current month number
+
+I hope this helps you understand how getMonth() works in JavaScript. If you have any other questions, feel free to ask me. 😊
+ -->

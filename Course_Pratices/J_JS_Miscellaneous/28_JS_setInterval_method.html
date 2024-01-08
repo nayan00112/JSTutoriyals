@@ -1,0 +1,23 @@
+
+<html>
+<head>
+    <title>JS_setInterval_method</title>
+</head>
+<body>
+    <div>
+        <h1>JS_setInterval_method</h1>
+    </div>
+    <script>
+        setInterval(fun , 1000);
+        let count = -1;
+
+        function fun(){
+            count++;
+            document.write("<br>Hello World " + count);
+            if (count == 5){
+                alert("Completed 5 Second:");
+            }   
+        }
+    </script>
+</body>
+</html>

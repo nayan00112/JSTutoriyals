@@ -1,0 +1,34 @@
+
+<html>
+<head>
+    <title>JS_hide_elements</title>
+</head>
+<body>
+    <div>
+        <h1>JS_hide_elements</h1>
+    </div>
+
+    <p id="pid">
+        Lorem ipsum, dolor sit amet consectetur eum!
+    </p>
+    <button onclick="myfun()" id="btn">Hide Text</button>
+
+
+    <script>
+        let v = 1
+        function myfun(){
+            if (v == 1){
+                document.getElementById("pid").style.display="none";
+                document.getElementById("btn").innerHTML="Display Text";
+                v = 0;
+            }
+            else{
+                document.getElementById("pid").style.display="block";
+                document.getElementById("btn").innerHTML="Hide Text";
+                v = 1;  
+            }
+        }
+        
+    </script>
+</body>
+</html>

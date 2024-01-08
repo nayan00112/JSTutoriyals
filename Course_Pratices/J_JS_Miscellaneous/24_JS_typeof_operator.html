@@ -1,0 +1,45 @@
+
+<html>
+<head>
+    <title>JS_typeof_operator</title>
+</head>
+<body>
+    <div>
+        <h1>JS_typeof_operator</h1>
+    </div>
+    <script>
+        let a = 34;
+        let b = "Nayan";
+        let c = true;
+        let d = 166.645;
+        let e = 4324324344353
+        let f = 432435456245.4224
+
+        let g = function(){
+            document.write("Hello");
+        }
+         
+        let h = {
+            "name":"Nayan", "email": "nayan123@gmail.com"
+        }
+
+        let i;
+
+        let j = new Date();
+
+        document.write("<br>"+ typeof(a));    // number
+        document.write("<br>"+ typeof(b));    // string
+        document.write("<br>"+ typeof(c));    // boolean
+        document.write("<br>"+ typeof(d));    // number
+        document.write("<br>"+ typeof(e));    // number
+        document.write("<br>"+ typeof(f));    // number
+        document.write("<br>"+ typeof(g));    // function
+        document.write("<br>"+ typeof(h));    // object
+        document.write("<br>"+ typeof(i));    // undefined
+        document.write("<br>"+ typeof(j));    // object
+        document.write("<br>"+ typeof(46));    // number
+        document.write("<br>"+ typeof("46"));    // string
+
+    </script>
+</body>
+</html>

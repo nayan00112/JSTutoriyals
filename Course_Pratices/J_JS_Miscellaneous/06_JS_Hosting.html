@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hosting</title>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript Hosting</h1>
+        <p>
+            Hosting is a mechanism in javascript that moves the declaration of variables and function at the top.
+            So, in javascript we can use variable and function before declaring them.
+        </p>
+        <p>
+            JavaScript hosting is applicable only for declaration not initialization.
+            It is required to initialize the variable and function before using their values.
+        </p>
+        <br>
+        <script>
+            // Variable Hosting:
+            x = 45;
+            document.writeln(x);
+            var x;
+            
+            // Function Hosting:
+            document.writeln(sum(24, 67));
+            function sum(a, b){
+                return a + b;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

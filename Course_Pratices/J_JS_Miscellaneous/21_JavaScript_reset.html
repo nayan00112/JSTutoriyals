@@ -1,0 +1,22 @@
+
+<html>
+<head>
+    <title>JavaScript_reset</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript_reset</h1>
+    </div>
+    <form action="" name="fm">
+        Name: <input type="text" name="name">
+        <input type="submit">
+        <input type="reset" value="reset">
+        <button onclick="resetfun()">Reset with js function</button>
+    </form>
+    <script>
+        function reset(){
+            document.getElementById("fm").reset();
+        }
+    </script>
+</body>
+</html>

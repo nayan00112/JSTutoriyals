@@ -1,0 +1,29 @@
+<!-- https://www.javatpoint.com/javascript-closest -->
+<html>
+<head>
+    <title>JavaScript_closest</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript_closest</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto enim sapiente sequi, libero eaque quod? Voluptas tempora ea, sit.
+        </p>
+        <b>Lorem, ipsum dolor.</b>
+
+        <span>
+            <kbd>Lorem, ipsum.</kbd>
+            Lorem ipsum dolor sit amet.
+        </span>
+        <h2>Lorem ipsum dolor sit.</h2>
+
+    </div>
+    <script>
+        var a = document.getElementsByTagName("b")[0];
+
+        console.log(a.closest("div"))
+        console.log(a.closest("kbd"))
+
+    </script>
+</body>
+</html>

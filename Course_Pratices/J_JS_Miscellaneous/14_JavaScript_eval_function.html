@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>JavaScript_eval_function</title>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript_eval_function</h1>
+    </div>
+    <div>
+        <input type="text" id="inp">
+        <button onclick="calfun()">Calculate</button>
+        <span id="res">Result: </span>
+    </div>
+    <script>
+        function calfun() {
+            try {
+                var a = document.getElementById("inp").value;
+
+                var res = eval(a);
+
+                document.getElementById("res").innerHTML = "Result: " + res;
+            }
+            catch (e) {
+                document.getElementById("res").innerHTML = "Result: <span style='color:red;'>" +  e.message + "</span>";
+            }
+        }
+    </script>
+</body>
+
+</html>

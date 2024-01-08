@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>JS_setAttribute_method</title>
+    <style>
+        .redfont {
+            color: red;
+        }
+
+        .yellow_background {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="heading">JS_setAttribute_method</h1>
+    </div>
+    <button onclick="redcolorFun()">Red Color Font</button>
+    <button onclick="yellow_backgroundFun()">Yellow Background</button>
+    <button onclick="redyellobothfun()">Red Color Font and Yellow Background</button>
+    <button onclick="reloadFun()">reload</button>
+    <script>
+        function redcolorFun() {
+            document.getElementById("heading").setAttribute("class", "redfont");
+        }
+        function yellow_backgroundFun() {
+            document.getElementById("heading").setAttribute("class", "yellow_background");
+        }
+        function redyellobothfun(){
+            document.getElementById("heading").setAttribute("class", "redfont yellow_background");
+        }
+        function reloadFun(){
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

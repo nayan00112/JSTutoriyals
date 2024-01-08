@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>JS_getAttribute_method</title>
+    <style>
+        h1 {
+            color: blue;
+            background-color: aliceblue;
+        }
+
+        .ssfont {
+            font-family: sans-serif;
+        }
+        .ffamily{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="padding:5px;" class="ssfont">JS_getAttribute_method</h1>
+    </div>
+    <p style="color:green; padding:5px;" class="ffamily" id="pid">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum totam dolorum, provident pariatur beatae.</p>
+
+    <script>
+        document.write(document.getElementById("pid").getAttribute("style")+"<br>")
+        document.write(document.getElementById("pid").getAttribute("id"))
+    </script>
+</body>
+
+</html>
