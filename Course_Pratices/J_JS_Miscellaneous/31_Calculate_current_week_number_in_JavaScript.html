@@ -1,0 +1,24 @@
+
+<html>
+<head>
+    <title>Calculate current week number in JavaScript</title>
+</head>
+<body>
+    <div>
+        <h1>Calculate current week number in JavaScript</h1>
+    </div>
+    <script>
+        let current_date = new Date();
+        let first_jan = new Date(current_date.getFullYear(), 0, 1);
+        document.write(first_jan+"<br>");
+
+        let diff = current_date - first_jan
+        // document.write(diff) //in milisecond
+        // The output of dividing two dates in JavaScript is in milliseconds
+
+        let month = (diff/(1000*60*60*24*7))
+        document.write("<br>Month: "+Math.ceil(month)+"<br>");    
+        // document.write(month);
+    </script>
+</body>
+</html>

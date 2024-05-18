@@ -1,0 +1,78 @@
+To display the result and refresh the page after calculating the age, you can modify the `calculate` function to show the result and then reload the page after a certain duration. Here's an example:
+
+```html
+<html>
+<head>
+    <title>Calculate days between two dates in JavaScript</title>
+</head>
+<body>
+    <div>
+        <h1>Calculate days between two dates in JavaScript</h1>
+    </div>
+    <h2>Birthday calculator</h2>
+    <form>
+        <label for="birthdate">Enter Your Birthday:</label>
+        <input type="date" name="birthdate" id="birthdate">
+        <button onclick="calculate(event)">Calculate</button>
+    </form>
+    <div id="res"></div>
+    <script>
+        function calculate(event){
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            let a = document.getElementById("birthdate").value;
+            let birthdate = new Date(a);
+            let current_date = new Date();
+            let diff = current_date - birthdate;
+
+            let age = (diff/(1000*60*60*24*365));
+            document.getElementById("res").innerHTML = "Your age is: " + age.toFixed(2);
+
+            // Reload the page after 5 seconds (5000 milliseconds)
+            setTimeout(function(){
+                location.reload();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+```
+
+This code snippet includes a `setTimeout` function that will reload the page after displaying the age for 5 seconds. Adjust the duration as needed by changing the value `5000` (which represents milliseconds).
+
+
+
+
+
+`event.preventDefault()` is a method used in JavaScript to prevent the default behavior of an event. In this case, it's used within a form submission context.
+
+When you have a `<form>` element in HTML and a submit button inside it, clicking that button normally triggers a form submission. This default behavior causes the browser to reload the page or perform an action specified in the form's `action` attribute.
+
+However, by using `event.preventDefault()` within an event handler (in this case, the `onclick` event of the Calculate button), you're explicitly telling the browser not to perform its default action. This is often used when you want to handle the form submission or button click manually using JavaScript without triggering the default action (like form submission or link following).
+
+In the provided code snippet:
+
+```javascript
+function calculate(event){
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    // ... rest of the code
+}
+```
+
+`event` is the parameter representing the event object passed to the function when the Calculate button is clicked. `preventDefault()` is a method of this event object that stops the default behavior associated with the event (in this case, preventing the form from submitting in the normal way). This allows you to execute your custom JavaScript code for calculating the age without the form submitting and the page reloading immediately.
+
+
+
+When a form is submitted, its default behavior depends on how it's set up:
+
+1. **Form Submission without JavaScript:**
+   - If you don't intervene with JavaScript and the form's `action` attribute is set (e.g., `<form action="/submit" method="post">`), the browser typically performs a full-page reload, redirecting to the specified URL in the `action` attribute, and the form fields might reset to their default values.
+
+2. **Form Submission with JavaScript:**
+   - If you're using JavaScript and have an event handler that intercepts the form submission event (`event.preventDefault()`), you can prevent the default behavior of the form submission.
+   - In this case, you can perform actions such as calculations, validations, or sending data asynchronously (e.g., via AJAX) without triggering a full page reload. You have control over what happens after the submission.
+
+If you do not prevent the default behavior using `event.preventDefault()` in JavaScript and allow the form to submit in the traditional way, the page will likely reload, and the form fields will reset to their initial values.
+
+However, if you handle the form submission using JavaScript without reloading the page (by preventing the default behavior), the form fields will not reset, and you can control what happens next based on your custom logic.

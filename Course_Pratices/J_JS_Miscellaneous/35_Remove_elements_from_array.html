@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Remove elements from array</title>
+    <style>
+        td,
+        th,
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px;
+
+        }
+
+        th {
+            background-color: rgb(212, 212, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Remove elements from array</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>pop()</td>
+            <td>This method removes the element from the end of the array..</td>
+        </tr>
+        <tr>
+            <td>shift()</td>
+            <td>Like the pop() method, it also removes the elements but from the start of the array</td>
+        </tr>
+        <tr>
+            <td>filter()</td>
+            <td>This filter() method removes the element from an array in a programmatically way.</td>
+        </tr>
+        <tr>
+            <td>splice()</td>
+            <td>This method removes the elements from a specific index.</td>
+        </tr>
+    </table>
+    <hr>
+    <div class="btn">
+        <button onclick="popfun()">pop</button>
+        <button onclick="shiftfun()">shift</button>
+        <!-- <button onclick="filterfun()">filter</button>
+        <button onclick="splicefun()">splice</button> -->
+    </div>
+    <hr>
+    <div id="txtarr">
+        Array:
+        <hr>
+    </div>
+    <script>
+
+
+        let a = ["apple", "mango", "banana", "watermelon", "guava", "grape"];
+
+        document.getElementById("txtarr").innerHTML = document.getElementById("txtarr").innerHTML + "<br>Original array: " + a + "<br>";
+
+        function popfun() {
+            var popedElement = a.pop();
+            document.getElementById("txtarr").innerHTML = document.getElementById("txtarr").innerHTML + "<br>Poped element is: " + popedElement;
+            document.getElementById("txtarr").innerHTML = document.getElementById("txtarr").innerHTML + "<br>Array is: " + a + "<br>";
+        }
+
+        function shiftfun() {
+            var shiftElement = a.shift();
+            document.getElementById("txtarr").innerHTML = document.getElementById("txtarr").innerHTML + "<br>Shifted element is: " + shiftElement;
+            document.getElementById("txtarr").innerHTML = document.getElementById("txtarr").innerHTML + "<br>Array is: " + a + "<br>";
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    You can use the `filter()` method to remove elements from an array based on a certain condition. Here is an example in JavaScript:
+
+```javascript
+const arr = [1, 2, 3, 4];
+const filteredArr = arr.filter(number => number !== 3);
+console.log(filteredArr); // [1, 2, 4]
+```
+
+The `filter()` method does not modify the original array, but creates a new array. If you want to modify the original array, you can use the `splice()` method. Here is an example:
+
+```javascript
+const arr = [1, 2, 3, 4];
+arr.splice(2, 1);
+console.log(arr); // [1, 2, 4]
+```
+
+In this example, the `splice()` method removes one element at index 2 from the `arr` array. The first argument to `splice()` is the index of the element to remove, and the second argument is the number of elements to remove. I hope this helps!
+
+Source: Conversation with Bing, 12/1/2024
+(1) Filter and delete filtered elements in an array - Stack Overflow. https://stackoverflow.com/questions/37385299/filter-and-delete-filtered-elements-in-an-array.
+(2) How can I remove a specific item from an array in JavaScript?. https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript.
+(3) How to remove elements from array in JavaScript. https://dev.to/bybydev/how-to-remove-elements-from-array-in-javascript-3c7l.
+(4) 9 Ways to Remove Elements From A JavaScript Array - Love2Dev. https://love2dev.com/blog/javascript-remove-from-array/.
+ -->

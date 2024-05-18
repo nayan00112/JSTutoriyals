@@ -1,0 +1,29 @@
+A module in JavaScript is a file of code that can be imported and exported by other files. Modules allow you to organize your code into smaller, reusable pieces. Modules also help you avoid naming conflicts and global scope pollution. You can use the `import` and `export` statements to work with modules in JavaScript. For example:
+
+```js
+// square.js
+export function area(side) {
+  return side * side;
+}
+
+export function perimeter(side) {
+  return side * 4;
+}
+```
+
+```js
+// main.js
+import { area, perimeter } from "./square.js";
+
+console.log(area(5)); // 25
+console.log(perimeter(5)); // 20
+```
+
+In this example, the file `square.js` is a module that exports two functions: `area` and `perimeter`. The file `main.js` is another module that imports these functions and uses them. You can learn more about JavaScript modules from [this guide](^4^) or [this reference](^2^).
+
+Source: Conversation with Bing, 22/1/2024
+(1) JavaScript Modules – A Beginner's Guide - freeCodeCamp.org. https://www.freecodecamp.org/news/javascript-modules-beginners-guide/.
+(2) JavaScript modules - JavaScript | MDN - MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules.
+(3) JavaScript Modules - W3Schools. https://www.w3schools.com/js/js_modules.asp.
+(4) What is a module in JavaScript - altcademy.com. https://altcademy.com/blog/what-is-a-module-in-javascript/.
+(5) JavaScript Modules – How to Create, Import, and Export a Module in JS. https://www.freecodecamp.org/news/javascript-modules/.

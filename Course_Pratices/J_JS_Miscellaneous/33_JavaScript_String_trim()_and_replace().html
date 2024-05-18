@@ -1,0 +1,60 @@
+<!-- https://www.javatpoint.com/javascript-string-trim -->
+
+<html>
+
+<head>
+    <title>JavaScript String trim()</title>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript String trim()</h1>
+    </div>
+    <div>
+        <p>
+            The trim() is a built-in string function in JavaScript which is used to trim a string.
+            This function removes the whitespace from both the ends, i. e., start and end of the string. As the trim()
+            is a string method, so it is invoked by an instance of String class with which the trim() method will be
+            used.
+        </p>
+        <textarea name="ta" id="ta" cols="30" rows="10" onkeyup="mystr()" placeholder="Enter the text"></textarea>
+
+    </div>
+    <div><u>
+            <h3>Row String:</h3>
+            <pre id="rowStr"></pre><br>
+
+            <h3>Trim String:</h3>
+            <pre id="trimStr"></pre><br>
+
+            <h3>TrimRight String:</h3>
+            <pre id="trimStrRight"></pre><br>
+
+            <h3>TrimLeft String:</h3>
+            <pre id="trimStrLeft"></pre><br>
+
+            <h3>String in &lt;p&gt; tag:</h3>
+            <p id="pStr"></p><br>
+        </u>
+    </div>
+
+    <script>
+        // not working
+        //     (function () {
+        //          let a = document.getElementById("ta").value;
+        //           document.getElementById("rowStr").innerHTML = a;
+        //        })();
+
+        function mystr() {
+            let a = document.getElementById("ta").value;
+            document.getElementById("rowStr").innerHTML = a;
+            document.getElementById("trimStr").innerHTML = a.trim();
+            document.getElementById("trimStrRight").innerHTML = a.trimRight();
+            document.getElementById("trimStrLeft").innerHTML = a.trimLeft();
+            document.getElementById("pStr").innerHTML = a;
+        }
+    </script>
+
+</body>
+
+</html>

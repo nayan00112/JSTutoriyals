@@ -1,7 +1,7 @@
 // function in javascript
 
 function Namaste(){
-    console.log("Hello");
+    return "Hello";
 }
 console.log(Namaste());
 

@@ -1,0 +1,31 @@
+
+<html>
+<head>
+    <title>JavaScript localStorage</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript localStorage</h1>
+    </div>
+    <script>
+        window.localStorage.setItem("name", "Nayankumar");
+        let a = window.localStorage.getItem("name");
+        document.write(`name: ${a}`);
+        window.localStorage.removeItem("name");
+        window.localStorage.clear();
+
+        document.write("<br>" + window.localStorage.getItem("name"))
+
+        
+
+
+        // Code to check browser support 
+        if (typeof(Storage) !== "undefined"){
+            console.log("Browser support localStorage");
+        }
+        else {
+            console.log("Browser does not support localStorage");
+        }
+    </script>
+</body>
+</html>

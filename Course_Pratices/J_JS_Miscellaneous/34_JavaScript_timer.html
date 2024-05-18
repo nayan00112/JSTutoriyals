@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>JavaScript timer</title>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript timer</h1>
+    </div>
+    <script>
+        function alertBox1() {
+            alert("Hello !!!");
+        }
+
+        var a = 5;
+        function alertBox2() {
+            if (a > 0) {
+                alert("Hello !!! " + a);
+                a--;
+            }
+            else {
+                return 0;
+            }
+        }
+    </script>
+    <!-- Not Below Code -->
+    <!-- <button onclick="setTimeout(alertBox(), 2000)">click me</button>  -->
+    <!-- Because fun() means execute and fun is like location -->
+
+    <!-- This is working... -->
+    <button onclick="setTimeout(alertBox1, 2000)">click me setTimeout</button>
+
+    <button onclick="setInterval(alertBox2, 1000)">click me setInterval</button>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+A self-executing function in JavaScript is a function that is invoked automatically as soon as it is defined, without needing to be called explicitly. It is also called an anonymous function or an immediately invoked function expression (IIFE)¹. 
+
+The syntax of a self-executing function is:
+
+```javascript
+(function (parameters) {
+  // Function body
+}) (arguments);
+```
+
+The function is wrapped in parentheses to indicate that it is an expression, and then followed by another pair of parentheses that contain the arguments to be passed to the function. The function can also return a value that can be assigned to a variable or passed to another function.
+
+One of the main purposes of a self-executing function is to create a local scope for the variables and functions defined inside it, preventing them from polluting the global namespace. This can help avoid naming conflicts and improve code readability and modularity. Another purpose is to execute some code immediately when a script is loaded or an event occurs, without having to wait for a function call.
+
+Here is an example of a self-executing function that generates a random number between 1 and 10 and assigns it to a variable:
+
+```javascript
+var randomNumber = (function () {
+  return Math.floor(Math.random() * 10) + 1;
+}) ();
+
+console.log(randomNumber); // A random number between 1 and 10
+```
+
+If you want to learn more about self-executing functions in JavaScript, you can check out these resources:
+
+- [What is the purpose of self executing function in JavaScript?](^1^)
+- [What is the Self-Executing Function](^2^)
+- [What is self executing function in Javascript](^3^)
+- [Javascript Self Executing Function: Javascript Explained](^4^)
+- [What is the purpose of a self executing function in javascript?](^5^)
+
+Source: Conversation with Bing, 9/1/2024
+(1) What is the purpose of self executing function in JavaScript?. https://www.geeksforgeeks.org/what-is-the-purpose-of-self-executing-function-in-javascript/.
+(2) What is the purpose of self executing function in JavaScript?. https://www.geeksforgeeks.org/what-is-the-purpose-of-self-executing-function-in-javascript/.
+(3) What is the Self-Executing Function - GeeksforGeeks. https://www.geeksforgeeks.org/what-is-the-self-executing-function/.
+(4) What is self executing function in Javascript - DigiMantra. https://www.digimantra.com/tutorials/what-is-self-executing-function-in-javascript/.
+(5) Javascript Self Executing Function: Javascript Explained - Bito. https://bito.ai/resources/javascript-self-executing-function-javascript-explained/.
+(6) What is the purpose of a self executing function in javascript?. https://stackoverflow.com/questions/592396/what-is-the-purpose-of-a-self-executing-function-in-javascript.

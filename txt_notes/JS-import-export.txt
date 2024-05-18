@@ -1,0 +1,141 @@
+Import export example in javascript:
+
+Sure, here's a simple example of importing and exporting in JavaScript using the CommonJS module system:
+
+Let's say you have two files:
+
+1. `moduleA.js` (exporting module)
+```javascript
+// moduleA.js
+const greeting = "Hello";
+
+function sayHello(name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+module.exports = {
+  greeting,
+  sayHello,
+};
+```
+
+2. `moduleB.js` (importing module)
+```javascript
+// moduleB.js
+const { greeting, sayHello } = require('./moduleA');
+
+console.log(greeting); // Output: Hello
+sayHello('User'); // Output: Hello, User!
+```
+
+In this example, `moduleA.js` exports a greeting and a function, and `moduleB.js` imports them using `require`. When you run `moduleB.js`, it will use the exported values from `moduleA.js`.
+
+
+
+Export default :
+
+Certainly! Here's an example of using the `export default` syntax in JavaScript:
+
+1. `moduleA.js` (exporting module with default export)
+```javascript
+// moduleA.js
+const greeting = "Hello";
+
+function sayHello(name) {
+  console.log(`${greeting}, ${name}!`);
+}
+
+export default {
+  greeting,
+  sayHello,
+};
+```
+
+2. `moduleB.js` (importing module with default export)
+```javascript
+// moduleB.js
+import moduleA from './moduleA';
+
+console.log(moduleA.greeting); // Output: Hello
+moduleA.sayHello('User'); // Output: Hello, User!
+```
+
+In this example, `moduleA.js` uses `export default` to export an object containing the greeting and the `sayHello` function. In `moduleB.js`, we use `import moduleA from './moduleA';` to import the entire module with the default export.
+
+
+What is default export:
+
+In JavaScript, the `export default` syntax is used to export a single "default" value or functionality from a module. It allows you to designate a primary export for a module, making it more convenient when importing.
+
+Here's a brief explanation:
+
+1. **Exporting with `export default`:**
+   ```javascript
+   // moduleA.js
+   const greeting = "Hello";
+
+   function sayHello(name) {
+     console.log(`${greeting}, ${name}!`);
+   }
+
+   export default {
+     greeting,
+     sayHello,
+   };
+   ```
+
+   In this example, the entire object containing `greeting` and `sayHello` is the default export.
+
+2. **Importing the default export:**
+   ```javascript
+   // moduleB.js
+   import moduleA from './moduleA';
+
+   console.log(moduleA.greeting); // Output: Hello
+   moduleA.sayHello('User'); // Output: Hello, User!
+   ```
+
+   When importing, you use the `import moduleA from './moduleA';` syntax. The imported name (`moduleA` in this case) is arbitrary and can be chosen by the developer.
+
+The `export default` is particularly useful when you want to provide a clear, primary export from a module, and it simplifies the import syntax for consumers of that module.
+
+
+what is named export ?:
+
+In JavaScript, named exports allow you to export multiple variables, functions, or classes from a module, each with a specific name. This is in contrast to the default export, which allows you to export a single "default" value or functionality. Named exports are useful when you want to export multiple values from a module and refer to them by their specific names when importing.
+
+Here's an example of using named exports:
+
+1. **Exporting with named exports:**
+   ```javascript
+   // moduleA.js
+   export const greeting = "Hello";
+
+   export function sayHello(name) {
+     console.log(`${greeting}, ${name}!`);
+   }
+   ```
+
+   In this example, `greeting` and `sayHello` are named exports.
+
+2. **Importing named exports:**
+   ```javascript
+   // moduleB.js
+   import { greeting, sayHello } from './moduleA';
+
+   console.log(greeting); // Output: Hello
+   sayHello('User'); // Output: Hello, User!
+   ```
+
+   When importing, you use the `{}` syntax to specify the names of the exports you want to import. Each exported name must be enclosed in curly braces, and you reference them by their respective names.
+
+You can also use the `as` keyword to rename the imported exports if needed:
+   ```javascript
+   // moduleB.js
+   import { greeting as customGreeting, sayHello } from './moduleA';
+
+   console.log(customGreeting); // Output: Hello
+   sayHello('User'); // Output: Hello, User!
+   ```
+
+Named exports provide a clear and explicit way to import specific values from a module, and they are especially useful when working with larger codebases and collaborating with other developers.

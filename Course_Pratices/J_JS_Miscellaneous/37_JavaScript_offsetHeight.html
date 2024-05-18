@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>JavaScript offsetHeight</title>
+    <style>
+        div {
+            padding: 100px;
+            border: 10px solid red;
+        }
+
+        h1 {
+            padding: 25px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript offsetHeight</h1>
+    </div>
+    <button onclick="f1()">click me</button>
+    <span id="res"></span>
+    <script>
+        function f1() {
+            let a = document.getElementsByTagName("h1")[0].offsetHeight;
+            let b = document.getElementsByTagName("h1")[0].offsetWidth;
+            document.getElementById("res").innerHTML = "Height of the elements paragraph along with padding and border in pixels is: " + a + "px, and offsetWidth is: " + b + "px.";
+        }
+    </script>
+</body>
+
+</html>
