@@ -39,7 +39,10 @@
         let mode = "Light";
 
         function myMode() {
-            //let e = document.getElementsByClassName("body")[0]
+            // let e = document.getElementsByClassName("body")[0]
+            // for above code research, look at end of the file.
+
+            let e = document.getElementById('e');
             if (mode == "Light") {
                 e.style.color = "white";
                 e.style.background = "#152238";
@@ -78,3 +81,19 @@
 </body>
 
 </html>
+
+
+<!-- By Chat gpt
+The issue in your code is due to the incorrect use of getElementsByClassName method for selecting the body element. The body tag does not have a class name "body". Instead, it has an ID of "e". When you uncomment the line // let e = document.getElementsByClassName("body")[0], it doesn't find any element with the class name "body", which causes the variable e to be undefined.
+
+You should use document.getElementById("e") to get the body element by its ID. 
+-->
+
+<!-- By google ai
+The code you provided has an issue in the line:
+
+let e = document.getElementsByClassName("body")[0]
+The problem is that there is no element with the class name “body” in your HTML code. You should use the id attribute to select the element you want to style. In this case, you have an element with the id “e”. So, you should change the code to:
+
+let e = document.getElementById("e")
+-->
